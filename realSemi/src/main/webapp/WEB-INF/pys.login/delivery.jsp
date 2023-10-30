@@ -150,7 +150,7 @@
        
       <div class="row" >
          <c:forEach var="pvo" items="${requestScope.productList}" varStatus="status">
-            <div class='col-lg-2'>
+            <div class='col-lg-3'>
                      <div class="card mb-3">
                         <img src='<%= ctxPath%>/image/${pvo.pimage}' class='card-img-top' style='width: 100%'/>
                         <div class='card-body' style='padding: 0; font-size: 9pt;'>

@@ -104,7 +104,7 @@ function menufunction(cnum) {
                           
             $.each(json, function(index, item){
                console.log(item.price);
-                 v_html += `<div class='col-lg-2'>
+                 v_html += `<div class='col-lg-3'>
 		                     <div class="card mb-3">
 		                        <img src='/tempSemi/image/${item.pimage}' class='card-img-top' style='width: 100%'/>
 		                        <div class='card-body' style='padding: 0; font-size: 9pt;'>
