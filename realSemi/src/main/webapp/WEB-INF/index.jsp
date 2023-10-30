@@ -23,7 +23,7 @@
 <link rel="stylesheet" type="text/css" href="<%= ctxPath%>/pys.css/index.css"/>
 
 <%-- Optional JavaScript --%>
-<script type="text/javascript" src="<%= ctxPath%>/js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="<%= ctxPath%>/pys.js/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="<%= ctxPath%>/bootstrap-4.6.2-dist/js/bootstrap.bundle.min.js" ></script> 
 
 <%-- jQueryUI CSS 및 JS --%>
