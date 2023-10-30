@@ -43,7 +43,75 @@ from tbl_member
 order by registerday desc;
 
 
+create table tbl_category
+(cnum    number(8)     not null  -- 카테고리 대분류 번호
+,code    varchar2(20)  not null  -- 카테고리 코드
+,cname   varchar2(100) not null  -- 카테고리명
+,constraint PK_tbl_category_cnum primary key(cnum)
+,constraint UQ_tbl_category_code unique(code)
+);
+
+create sequence seq_category_cnum 
+start with 1
+increment by 1
+nomaxvalue
+nominvalue
+nocycle
+nocache;
+
+insert into tbl_category(cnum, code, cname) values(seq_category_cnum.nextval, '100000', '스페셜');
+insert into tbl_category(cnum, code, cname) values(seq_category_cnum.nextval, '200000', '신제품');
+insert into tbl_category(cnum, code, cname) values(seq_category_cnum.nextval, '300000', '프리미엄');
+insert into tbl_category(cnum, code, cname) values(seq_category_cnum.nextval, '400000', '와퍼');
+insert into tbl_category(cnum, code, cname) values(seq_category_cnum.nextval, '500000', '치킨버거');
+insert into tbl_category(cnum, code, cname) values(seq_category_cnum.nextval, '600000', '사이드');
+insert into tbl_category(cnum, code, cname) values(seq_category_cnum.nextval, '700000', '음료');
+commit;
 
 
+drop table tbl_category purge;
+drop sequence seq_category_cnum;
 
 
+select *
+from tbl_category;
+
+insert into tbl_product(pnum, pname, fk_cnum, pimage, pqty, price, pcontent, pdetail)
+values(seq_tbl_product_pnum.nextval, '갈릭불고기와퍼', 4, '갈릭불고기와퍼.png', 100, 8300, null, null);
+
+insert into tbl_product(pnum, pname, fk_cnum, pimage, pqty, price, pcontent, pdetail)
+values(seq_tbl_product_pnum.nextval, '불고기와퍼', 4, '불고기와퍼.png', 100, 8000, '불에 직접 구운 순 쇠고기 패티가 들어간 와퍼에 달콤한 불고기 소스까지!', null);
+
+insert into tbl_product(pnum, pname, fk_cnum, pimage, pqty, price, pcontent, pdetail)
+values(seq_tbl_product_pnum.nextval, '와퍼', 4, '와퍼.png', 100, 8000, '불에 직접 구운 순 쇠고기 패티에 싱싱한 야채가 한가득~ 버거킹의 대표 메뉴!', null);
+
+insert into tbl_product(pnum, pname, fk_cnum, pimage, pqty, price, pcontent, pdetail)
+values(seq_tbl_product_pnum.nextval, '치즈와퍼', 4, '치즈와퍼.png', 100, 8300, '불에 직접 구운 순 쇠고기 패티가 들어간 와퍼에 고소한 치즈까지!', null);
+
+insert into tbl_product(pnum, pname, fk_cnum, pimage, pqty, price, pcontent, pdetail)
+values(seq_tbl_product_pnum.nextval, '콰트로치즈와퍼', 4, '콰트로치즈와퍼.png', 100, 8300, '진짜 불맛을 즐겨라, 4가지 고품격 치즈와 불에 직접 구운 와퍼 패티의 만남!', null);
+
+
+commit;
+
+
+insert into tbl_product(pnum, pname, fk_cnum, pimage, pqty, price, pcontent, pdetail)
+values(seq_tbl_product_pnum.nextval, '롱치킨버거', 5, '롱치킨버거.png', 100, 5600, '담백한 치킨 패티에 부드러운 마요네즈 소스와 싱싱한 야채가 듬뿍~', null);
+
+insert into tbl_product(pnum, pname, fk_cnum, pimage, pqty, price, pcontent, pdetail)
+values(seq_tbl_product_pnum.nextval, '바비큐치킨버거', 5, '바비큐치킨버거.png', 100, 4600, '진한 바비큐 소스가 가득!', null);
+
+insert into tbl_product(pnum, pname, fk_cnum, pimage, pqty, price, pcontent, pdetail)
+values(seq_tbl_product_pnum.nextval, '치킨버거', 5, '치킨버거.png', 100, 4600, '부드러운 에그번과 킹치킨패티의 만남! 풍부한 마요 소스로 고소하게!', null);
+
+insert into tbl_product(pnum, pname, fk_cnum, pimage, pqty, price, pcontent, pdetail)
+values(seq_tbl_product_pnum.nextval, '치킨킹', 5, '치킨킹.png', 100, 7400, '스파이시한 통닭다리살과 고소한 브리오쉬번이 만나 더 풍부해진 프리미엄 치킨버거. 치킨킹!', null);
+
+insert into tbl_product(pnum, pname, fk_cnum, pimage, pqty, price, pcontent, pdetail)
+values(seq_tbl_product_pnum.nextval, '치킨킹BTL', 5, '치킨킹BTL.png', 100, 8400, '스파이시한 통닭다리살 프리미엄 치킨버거에 베이컨, 양상추, 토마토를 더했다. 치킨킹 BLT!', null);
+
+
+select *
+from tbl_product
+where fk_cnum = 1
+order by pnum desc;
