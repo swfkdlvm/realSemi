@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%
     String ctxPath = request.getContextPath();
-    //    /tempSemi
+    //    /MyMVC
 %>
 <!DOCTYPE html>
 <html>
@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 <%-- 직접 만든 CSS --%>
-<link rel="stylesheet" type="text/css" href="<%= ctxPath%>/kjy.css/index.css"/>
+<link rel="stylesheet" type="text/css" href="<%= ctxPath%>/pys.css/index.css"/>
 
 <%-- Optional JavaScript --%>
 <script type="text/javascript" src="<%= ctxPath%>/js/jquery-3.7.1.min.js"></script>
@@ -31,7 +31,7 @@
 <script type="text/javascript" src="<%= ctxPath%>/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <%-- 직접만든 JS --%>
-<script type="text/javascript" src="<%= ctxPath%>/kjy.js/index.js"></script>
+<script type="text/javascript" src="<%= ctxPath%>/pys.js/index.js"></script>
 
 <script type="text/javascript">
 
@@ -54,15 +54,16 @@ function redirectToOtherPage() {
             
             <nav class="nav">
             <ul class="gnb">
-                <li><a href="<%= ctxPath%>/category/special.bk">메뉴소개</a>
+                <li><a href="#">메뉴소개</a>
                     <ul class="sub">
-                        <li><a href="<%= ctxPath%>/category/special.bk">스페셜팩</a></li>
-                        <li><a href="<%= ctxPath%>/category/new.bk">신제품</a></li>
-                        <li><a href="<%= ctxPath%>/category/premium.bk">프리미엄</a></li>
-                        <li><a href="<%= ctxPath%>/category/whopper.bk">와퍼</a></li>
-                        <li><a href="<%= ctxPath%>/category/chickenbugger.bk">치킨버거</a></li>
-                        <li><a href="<%= ctxPath%>/category/side.bk">사이드</a></li>
-                        <li><a href="<%= ctxPath%>/category/drink.bk">음료</a></li>
+                        <li><a href="#">스페셜&amp;할인팩</a></li>
+                        <li><a href="#">신제품(NEW)</a></li>
+                        <li><a href="#">프리미엄</a></li>
+                        <li><a href="#">와퍼&amp;주니어</a></li>
+                        <li><a href="#">치킨&amp;슈림프버거</a></li>
+                        <li><a href="#">올데이킹&amp;킹모닝</a></li>
+                        <li><a href="#">사이드</a></li>
+                        <li><a href="#">음료&amp;디저트</a></li>
                     </ul>
                 </li>
                 <li><a href="#">매장소개</a>
@@ -260,13 +261,14 @@ function redirectToOtherPage() {
       <ul class="main_bottom">
           <li><a href="#"><span class="main_bottom_main">메뉴</span></a>
               <ul class="main_bottom_sub">
-                  <li><a href="<%= ctxPath%>/category/special.bk">스페셜팩</a></li>
-                  <li><a href="<%= ctxPath%>/category/new.bk">신제품</a></li>
-                  <li><a href="<%= ctxPath%>/category/premium.bk">프리미엄</a></li>
-                  <li><a href="<%= ctxPath%>/category/whopper.bk">와퍼</a></li>
-                  <li><a href="<%= ctxPath%>/category/chickenbugger.bk">치킨버거</a></li>
-                  <li><a href="<%= ctxPath%>/category/side.bk">사이드</a></li>
-                  <li><a href="<%= ctxPath%>/category/drink.bk">음료</a></li>
+                  <li><a href="#">스페셜&amp;할인팩</a></li>
+                  <li><a href="#">신제품(NEW)</a></li>
+                  <li><a href="#">프리미엄</a></li>
+                  <li><a href="#">와퍼&amp;주니어</a></li>
+                  <li><a href="#">치킨&amp;슈림프버거</a></li>
+                  <li><a href="#">올데이킹&amp;킹모닝</a></li>
+                  <li><a href="#">사이드</a></li>
+                  <li><a href="#">음료&amp;디저트</a></li>
               </ul>
           </li>
           <li><a href="#"><span class="main_bottom_main">매장</span></a>
