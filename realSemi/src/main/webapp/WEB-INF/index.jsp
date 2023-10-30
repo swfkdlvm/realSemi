@@ -37,7 +37,7 @@
 
 function redirectToOtherPage() {
 	
-    window.location.href = "http://localhost:9090/tempSemi/login/loginIndex.bk"; // "목표페이지의URL"을 실제 페이지의 URL로 바꿔주세요.
+    window.location.href = "http://localhost:9090/realSemi/login/loginIndex.bk"; // "목표페이지의URL"을 실제 페이지의 URL로 바꿔주세요.
 }
 </script>
 
