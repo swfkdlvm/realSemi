@@ -5,7 +5,7 @@ import java.util.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import kjy.common.controller.AbstractController;
+import common.controller.AbstractController;
 import kjy.member.model.*;
 
 public class IdFindAction extends AbstractController {

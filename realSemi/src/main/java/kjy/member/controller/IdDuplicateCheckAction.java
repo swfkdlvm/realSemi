@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.json.JSONObject;
 
-import kjy.common.controller.AbstractController;
+import common.controller.AbstractController;
 import kjy.member.model.*;
 
 public class IdDuplicateCheckAction extends AbstractController {

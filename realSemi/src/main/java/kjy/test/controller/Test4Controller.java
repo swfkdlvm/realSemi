@@ -3,7 +3,7 @@ package kjy.test.controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import kjy.common.controller.AbstractController;
+import common.controller.AbstractController;
 
 public class Test4Controller extends AbstractController {
 
