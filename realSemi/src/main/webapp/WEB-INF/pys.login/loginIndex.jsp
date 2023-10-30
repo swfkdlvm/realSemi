@@ -164,7 +164,10 @@ function toggleImage() {
 						<%-- ==== 아이디 찾기, 비밀번호 찾기 --%>
 						<tr>
 							<td></td>
-							<td><a class="find" style="cursor: pointer;">아이디찾기</a>&nbsp;&nbsp;<a class="find" style="cursor: pointer;">비밀번호찾기</a></td>
+							<td>
+                        <a class="find" style="cursor: pointer;" href="<%= ctxPath%>/login/idSearch.bk">아이디찾기</a>&nbsp;&nbsp;
+                        <a class="find" style="cursor: pointer;" href="<%= ctxPath%>/login/pwdSearch.bk">비밀번호찾기</a>
+                     </td>
 						</tr>
 					</tbody>
 				</table>
