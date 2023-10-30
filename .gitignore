@@ -96,7 +96,6 @@ replay_pid*
 # End of https://www.toptal.com/developers/gitignore/api/java,eclipse
 
 ##### commit 제외파일 #####
-<<<<<<< HEAD
 /realSemi/src/main/java/my/util
 /realSemi/src/main/java/my/filter
 /realSemi/src/main/java/util/security
@@ -117,5 +116,3 @@ replay_pid*
 /realSemi/src/main/webapp/WEB-INF/msg.jsp
 /realSemi/src/main/webapp/WEB-INF/web.xml
 /realSemi/src/main/webapp/META-INF
-=======
->>>>>>> branch 'main' of https://github.com/swfkdlvm/realSemi.git
