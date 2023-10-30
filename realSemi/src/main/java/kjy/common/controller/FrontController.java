@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 		description = "사용자가 웹에서 *.bk 을 했을 경우 이 서블릿이 응답을 해주도록 한다.", 
 		urlPatterns = { "*.bk" }, 
 		initParams = { 
-				@WebInitParam(name = "propertyConfig", value = "C:/NCS/workspace_jsp/tempSemi/src/main/webapp/WEB-INF/Command.properties", description = "*.bk 에 대한 클래스의 매핑파일") 
+				@WebInitParam(name = "propertyConfig", value = "C:\\git\\realSemi\\realSemi\\src\\main\\webapp\\WEB-INF\\Command.properties", description = "*.bk 에 대한 클래스의 매핑파일") 
 		})
 public class FrontController extends HttpServlet {
 	

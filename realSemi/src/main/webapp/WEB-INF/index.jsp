@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 <%-- 직접 만든 CSS --%>
-<link rel="stylesheet" type="text/css" href="<%= ctxPath%>/css/index.css"/>
+<link rel="stylesheet" type="text/css" href="<%= ctxPath%>/kjy.css/index.css"/>
 
 <%-- Optional JavaScript --%>
 <script type="text/javascript" src="<%= ctxPath%>/js/jquery-3.7.1.min.js"></script>
@@ -31,7 +31,7 @@
 <script type="text/javascript" src="<%= ctxPath%>/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <%-- 직접만든 JS --%>
-<script type="text/javascript" src="<%= ctxPath%>/js/index.js"></script>
+<script type="text/javascript" src="<%= ctxPath%>/kjy.js/index.js"></script>
 
 <script type="text/javascript">
 
