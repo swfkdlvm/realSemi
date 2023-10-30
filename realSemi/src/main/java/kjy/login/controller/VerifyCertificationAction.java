@@ -4,7 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import kjy.common.controller.AbstractController;
+import common.controller.AbstractController;
 
 public class VerifyCertificationAction extends AbstractController {
 

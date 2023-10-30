@@ -3,7 +3,7 @@ package kjy.menuDetail.controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import kjy.common.controller.AbstractController;
+import common.controller.AbstractController;
 import kjy.myshop.domain.ProductVO;
 
 public class MenuDetailAction extends AbstractController {

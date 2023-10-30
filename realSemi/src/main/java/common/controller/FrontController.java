@@ -1,4 +1,4 @@
-package kjy.common.controller;
+package common.controller;
 
 import java.io.*;
 import java.lang.reflect.Constructor;
