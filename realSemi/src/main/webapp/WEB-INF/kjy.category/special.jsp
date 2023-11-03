@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <%
     String ctxPath = request.getContextPath();
     //    /MyMVC
@@ -22,7 +25,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 <%-- Optional JavaScript --%>
-<script type="text/javascript" src="<%= ctxPath%>/js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="<%= ctxPath%>/kjy.js/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="<%= ctxPath%>/bootstrap-4.6.2-dist/js/bootstrap.bundle.min.js" ></script> 
 
 <%-- jQueryUI CSS 및 JS --%>
@@ -30,14 +33,14 @@
 <script type="text/javascript" src="<%= ctxPath%>/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
 
 <%-- 직접 만든 JS --%>
-<script type="text/javascript" src="<%= ctxPath%>/js/template/template.js"></script>
+<script type="text/javascript" src="<%= ctxPath%>/kjy.js/category/special.js"></script>
 
 <style type="text/css">
 
 @font-face {
     font-family: dabanggu;
     font-weight: 400;
-    src: url(<%= ctxPath%>/font/Typo_DabangguB.ttf) format("woff2"),url(<%= ctxPath%>/font/Typo_DabangguB.ttf) format("woff")
+    src: url(<%= ctxPath%>/font/Typo_DabangguB.ttf) format("woff2"),url(<%= ctxPath%>/font/Typo_DabangguB.ttf) format("woff");
 } 
 
 body > nav:nth-child(2) > ul {
@@ -75,7 +78,16 @@ body > div > div > div > p > a:hover {
 	font-size: 20px;
 	color: black;
 	text-decoration: none;
-} 
+}
+
+#categoryList > a {
+	font-size: 15pt;
+	text-decoration: none;
+	margin-right: 10px;
+	color: black;
+	font-weight: bold;
+}
+
 </style>
 
 </head>
@@ -97,64 +109,21 @@ body > div > div > div > p > a:hover {
 	</nav>
 	
 	<%-- 상단 메뉴바 2 --%>
-	<nav class="navbar navbar-expand-sm">
-  		<ul class="nav justify-content-center">
-    		<li class="nav-item">
-      			<a class="nav-link disabled" href="#">메뉴소개</a>
-    		</li>
-    		<li class="nav-item pt-3">
-      			<a class="nav-link" href="#" style="color: #E3242B; text-decoration: underline 3px;">스페셜팩</a>
-    		</li>
-    		<li class="nav-item pt-3">
-      			<a class="nav-link" href="<%= ctxPath%>/category/new.bk">신제품</a>
-    		</li>
-    		<li class="nav-item pt-3">
-      			<a class="nav-link" href="<%= ctxPath%>/category/premium.bk">프리미엄</a>
-    		</li>
-    		<li class="nav-item pt-3">
-      			<a class="nav-link" href="<%= ctxPath%>/category/whopper.bk">와퍼</a>
-    		</li>
-    		<li class="nav-item pt-3">
-      			<a class="nav-link" href="<%= ctxPath%>/category/chickenbugger.bk">치킨버거</a>
-    		</li>
-
-    		<li class="nav-item pt-3">
-      			<a class="nav-link" href="<%= ctxPath%>/category/side.bk">사이드</a>
-    		</li>
-    		<li class="nav-item pt-3">
-      			<a class="nav-link" href="<%= ctxPath%>/category/drink.bk">음료</a>
-    		</li>
-  		</ul>
-	</nav>
+	<div class="container pt-3" id="menu_container">
+		<span style="font-size: 27pt; font-weight: bold;">메뉴소개</span>
 		
-	<div class="container text-center" style="height: 350px;">
-	  <div class="row">
-	    <div class="col-sm-3">
-	      <div class="image-frame p-3">
-	        <a href="<%= ctxPath%>/menuDetail.bk?pnum=1"><img height="150px" src="<%= ctxPath%>/image/special/트머와팩(2인).png"></a>
-	      </div>
-	      <p><a href="<%= ctxPath%>/menuDetail.bk?pnum=1">트머와팩(2인)</a></p>
-	    </div>
-	    <div class="col-sm-3">
-	      <div class="image-frame p-3">
-	        <a href="<%= ctxPath%>/menuDetail.bk?pnum=3"><img height="150px" src="<%= ctxPath%>/image/special/트머와 콤비팩(2인).png"></a>
-	      </div>
-	      <p><a href="<%= ctxPath%>/menuDetail.bk?pnum=3">트머와 콤비팩(2인)</a></p>
-	    </div>
-	    <div class="col-sm-3">
-	      <div class="image-frame p-3">
-	        <a href="<%= ctxPath%>/menuDetail.bk?pnum=4"><img height="150px" src="<%= ctxPath%>/image/special/트머와 트리플팩(3인).png"></a>
-	      </div>
-	      <p><a href="<%= ctxPath%>/menuDetail.bk?pnum=4">트머와 트리플팩(3인)</a></p>
-	    </div>
-	    <div class="col-sm-3">
-	      <div class="image-frame p-3">
-	        <a href="<%= ctxPath%>/menuDetail.bk?pnum=5"><img height="150px" src="<%= ctxPath%>/image/special/트머와 올인팩(3인).png"></a>
-	      </div>
-	      <p><a href="<%= ctxPath%>/menuDetail.bk?pnum=5">트머와 올인팩(3인)</a></p>
-	    </div>
-	  </div>
-	</div>
+	<%-- 카테고리 json 쏴주는 부분 --%>
+	<div id="categoryList" style="display:inline-block; margin-left:100px; padding-bottom:50px;"></div>
+	<%-- 카테고리 json 쏴주는 부분 --%>
+	
+	<%-- 메뉴 json 쏴주는 부분 시작 --%>
+	<div id="menuList" class="container" style="width:100%">
+
+	</div>	
+	<%-- 메뉴 json 쏴주는 부분 끝 --%>
+	
+		
+</div>	
 
 <jsp:include page="../footer.jsp" />
 	
