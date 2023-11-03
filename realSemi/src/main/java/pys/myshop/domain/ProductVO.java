@@ -14,6 +14,7 @@ public class ProductVO {
 	
 	private CategoryVO categvo; // 카테고리VO 
 	
+	private int totalPrice;         // 판매당시의 제품판매가 * 주문량
 	
 	
 	
@@ -112,6 +113,19 @@ public class ProductVO {
 		this.pdetail = pdetail;
 	}
 
-
+	/////////////////////////////////////////////////
+	// *** 제품의 총판매가(실제판매가 * 주문량) 구해오기 ***
+	public void setTotalPriceTotalPoint(int oqty) {   
+	// int oqty 이 주문량이다.
+	
+	totalPrice = price * oqty; // 판매당시의 제품판매가 * 주문량
+	
+	}
+	
+	public int getTotalPrice() {
+	return totalPrice;
+	}
+	
+	
 	
 }
