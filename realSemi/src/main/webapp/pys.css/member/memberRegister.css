@@ -97,9 +97,7 @@ a.nav-item {
 	 
 }
 
-input {
-	border-radius: 10px;
-}
+
 #tblMemberRegister > tbody > tr > td {
 	padding-top: 20px;
 }
@@ -141,6 +139,14 @@ input {
 	font-family: dabanggu;
 	height:50px;
 	width:100px;
+}
+
+input.background {
+	background-image: url("../../image/인풋밑줄.png");
+	background-repeat: no-repeat;
+    background-position: bottom center;
+    border:none;
+ 
 }
 
 
