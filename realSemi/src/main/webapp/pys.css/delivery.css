@@ -6,10 +6,12 @@
     src: url(../font/Typo_DabangguB.ttf) format("woff2"),url(../font/Typo_DabangguB.ttf) format("woff")
 }
 
-
+body{
+	font-family: dabanggu;
+}
 
 div#rlcontainer {
-	background: url('/src/main/webapp/image/logo.png') no-repeat;
+	
     background-position: center;
 }
 
@@ -154,6 +156,8 @@ a.lasta {
 #menu_container {
 	font-family: dabanggu;
 }
+
+/*헤더 끝*/
 
 
 

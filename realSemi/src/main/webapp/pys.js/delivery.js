@@ -1,6 +1,8 @@
 
 
 $(document).ready(function(){
+	let cnum = 1;
+	menufunction(cnum);
 	
 	$.ajax({
       url:"categoryListJSON.bk",
@@ -44,6 +46,7 @@ $(document).ready(function(){
             
               
 			// 카테고리 출력하기
+			
 			$("div#categoryList").html(v_html);
             
              
@@ -70,7 +73,7 @@ function menufunction(cnum) {
         dataType: "json",
         success: function(json) {
 			
-            $("div#first_show_menu").hide();
+            
             
             let v_html = ``;
           
@@ -103,7 +106,7 @@ function menufunction(cnum) {
 			v_html += `<div class="row text-center">`;
                           
             $.each(json, function(index, item){
-               console.log(item.price);
+               
                  v_html += `<div class='col-lg-3'>
 		                     <div class="card mb-3">
 		                        <img src='/tempSemi/image/${item.pimage}' class='card-img-top' style='width: 100%'/>
@@ -111,8 +114,8 @@ function menufunction(cnum) {
 		                          <ul class='list-unstyled mt-2 text-center'> 
 		                               <li>${item.pname}</li> 
 		                               <li><span style="color: red;">${new Intl.NumberFormat('ko-KR', { style: 'currency', currency: 'KRW' }).format(item.price)}</span></li>
-		                               <li class='text-center'><a href='/tempSemi/shop/prodView.bk?pnum=${item.pnum}' class='stretched-link btn btn-outline-dark btn-sm' role='button'>상세보기</a></li> 
-		                                   
+		                               <li class='text-center'><a href="javascript:cartListAdd(${item.pnum})" class='stretched-link btn btn-outline-dark btn-sm' role='button'>상세보기</a></li> 
+		                                   	
 		                            </ul>
 		                         </div>
 		                      </div>
@@ -133,6 +136,30 @@ function menufunction(cnum) {
          alert("code: "+request.status+"\n"+"message: "+request.responseText+"\n"+"error: "+error);
       }      
     });
+}
+
+function cartListAdd(pnum){
+	
+	$.ajax({
+        url: "/tempSemi/shop/cartListAdd.bk",
+        type: "post",
+        data: { "pnum": pnum},
+        dataType: "json",
+        success: function(json) {
+			
+		if(json.n == 1) {
+				
+				location.href = "/tempSemi/shop/cartList.bk";
+		 
+	 		}
+			
+		},
+		
+		error: function(request, status, error){
+         alert("code: "+request.status+"\n"+"message: "+request.responseText+"\n"+"error: "+error);
+      }      
+      
+	});
 }
 
 
