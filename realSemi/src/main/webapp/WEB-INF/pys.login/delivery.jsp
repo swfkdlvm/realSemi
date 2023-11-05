@@ -34,6 +34,41 @@
 
 <script type="text/javascript" src="<%= ctxPath%>/pys.js/delivery.js"></script>
 
+<script type="text/javascript">
+
+$(document).ready(function(){
+	
+	 
+	
+	cartCount()
+	
+	
+});//end of $(document).ready(function(){
+
+function cartCount(){
+	
+
+$.ajax({
+	   url:"<%=ctxPath%>/shop/cartCount.bk",
+	   type:"post",
+	   data:{"userid":"${sessionScope.loginuser.userid}"},
+	   dataType: "json",
+	   success:function(json){
+		   if(Number(json.cnt) > 0){
+			   $("#secondtbl > tbody > tr:nth-child(1) > td:nth-child(2)").html(`<span class='badge badge-pill badge-danger'>\${json.cnt}개</span>`);
+			   $("#secondtbl > tbody > tr:nth-child(2) > td").html(`<span>\${json.pname} 외 \${Number(json.cnt) - 1}개 </span>`);
+		   }
+	   
+		   
+	   },
+		   
+		   
+		 error: function(request, status, error){
+      alert("code: "+request.status+"\n"+"message: "+request.responseText+"\n"+"error: "+error);
+   }
+});
+}
+</script>
 </head>
 <body>
 	
@@ -128,7 +163,7 @@
 			  </ul>
 			  <ul id="rightbar" class="navbar-nav ml-auto">  
 			    <li class="nav-item">
-			      <a class="nav-link disabled text-white" href="#" tabindex="-1" aria-disabled="true">배달지를 선택하세요</a>
+			      <a class="nav-link disabled text-white" href="#" tabindex="-1" aria-disabled="true">현재주소 : ${sessionScope.loginuser.address} ${sessionScope.loginuser.detailaddress} ${sessionScope.loginuser.extraaddress}</a>
 			    </li>
 			    <li class="nav-item">
 			    	<button id="change" type="button" class="btn btn-light">변경</button>
@@ -144,35 +179,9 @@
 		<%-- 카테고리 json 쏴주는 부분 --%>
 		<div id="categoryList" style="display:inline-block; margin-left:100px; padding-bottom:50px;"></div>
 		<%-- 카테고리 json 쏴주는 부분 --%>
-		
-<div id="first_show_menu">
-   <c:if test="${not empty requestScope.productList}">
-       
-      <div class="row" >
-         <c:forEach var="pvo" items="${requestScope.productList}" varStatus="status">
-            <div class='col-lg-3'>
-                     <div class="card mb-3">
-                        <img src='<%= ctxPath%>/image/${pvo.pimage}' class='card-img-top' style='width: 100%'/>
-                        <div class='card-body' style='padding: 0; font-size: 9pt;'>
-                          <ul class='list-unstyled mt-2 text-center'> 
-                               <li>${pvo.pname}</li> 
-                               <li><span style="color: red;">₩<fmt:formatNumber value="${pvo.price}" pattern="#,###" /></span></li> 
-                               <li class='text-center'><a href='/tempSemi/shop/prodView.bk?pnum=${pvo.pnum}' class='stretched-link btn btn-outline-dark btn-sm' role='button'>상세보기</a></li> 
-                                   <%-- 카드 내부의 링크에 .stretched-link 클래스를 추가하면 전체 카드를 클릭할 수 있고 호버링할 수 있습니다(카드가 링크 역할을 함). --%>
-                            </ul>
-                         </div>
-                      </div>
-                    </div>
-           </c:forEach>
-        </div>
-                
-        
-     </c:if>   
-        
-     <c:if test="${empty requestScope.productList}">
-      제품진열 준비중입니다.
-    </c:if>
-</div>
+		<%-- 지운부분 --%>
+
+<%-- 지운부분 --%>
 </div>	
 
 
@@ -220,7 +229,7 @@
 			</div>
 		</div>
 	
-	</div>
+	
 	
 </body>
 </html>

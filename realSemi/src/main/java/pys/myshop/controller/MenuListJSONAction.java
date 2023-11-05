@@ -46,7 +46,7 @@ public class MenuListJSONAction extends AbstractController {
 	      
 	      String json = jsonArr.toString(); // 문자열로 변환 
 	      
-	      System.out.println("~~~ 확인용 json => " + json);
+	      //System.out.println("~~~ 확인용 json => " + json);
 	      /* ~~~ 확인용 json => [{"code":"100000","cname":"전자제품","cnum":1}
 	                           ,{"code":"200000","cname":"의류","cnum":2}
 	                           ,{"code":"300000","cname":"도서","cnum":3}]
