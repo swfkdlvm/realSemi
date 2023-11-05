@@ -37,6 +37,12 @@ public interface ProductDAO {
 	// 장바구니에서 삭제하기
 	int delCart(String cartno)throws SQLException;
 	
+	// 특정 유저의 장바구니 상세테이블 개수 알아오기
+	Map<String, String> countCart(String userid)throws SQLException;
+	
+	
+	
+	
 	
 	
 	

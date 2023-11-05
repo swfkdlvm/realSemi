@@ -376,8 +376,57 @@ public class ProductDAO_imple implements ProductDAO {
 	      }
 	      
 	      return n;
-	}
+	}//end of public int delCart(String cartno) throws SQLException {
 
+	
+	
+	// 특정 유저의 장바구니 상세테이블 개수 알아오기
+	@Override
+	public Map<String, String> countCart(String userid) throws SQLException {
+		int cnt = 0;
+		Map<String, String> countMap = new HashMap<>();
+
+		try {
+			conn = ds.getConnection();
+			
+			String sql = " select pname "
+					   + " from "
+					   + "( "
+					   + " select * "
+					   + " from tbl_cart "
+					   + " where fk_userid = ? "
+					   + " )C JOIN tbl_product P "
+					   + " ON C.fk_pnum = P.pnum ";
+			
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, userid);
+			
+			rs = pstmt.executeQuery();
+			
+			
+			while(rs.next()) {
+				countMap.put("pname", rs.getString("PNAME"));
+				cnt++;
+				
+			}
+			countMap.put("cnt", String.valueOf(cnt));
+			
+			
+		} finally {
+			close();
+		}
+		
+		
+		return countMap;
+		
+		
+		
+		
+	}
+	
+	
+
+	
 
 	
 }

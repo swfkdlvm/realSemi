@@ -37,6 +37,8 @@
 
 $(document).ready(function(){
 	
+	cartCount()
+	
 	// 제품번호의 모든 체크박스가 체크가 되었다가 그 중 하나만 이라도 체크를 해제하면 전체선택 체크박스에도 체크를 해제하도록 한다.
     $(".chkboxpnum").click(function(){
        
@@ -178,7 +180,10 @@ function oqtyplus(obj) {
 }
 
 function goBack() {
-    window.history.back();
+	
+
+	window.location.href = '<%= ctxPath %>/login/delivery.bk';
+    
 }
 
 //=== 장바구니에서 제품 주문하기 === // 
@@ -324,6 +329,32 @@ function checkDelete() {
 }
 }
 }//end of checkDelete()
+
+function cartCount(){
+	
+
+	$.ajax({
+		   url:"<%=ctxPath%>/shop/cartCount.bk",
+		   type:"post",
+		   data:{"userid":"${sessionScope.loginuser.userid}"},
+		   dataType: "json",
+		   success:function(json){
+			   if(Number(json.cnt) > 0){
+				   $("#secondtbl > tbody > tr:nth-child(1) > td:nth-child(2)").html(`<span class='badge badge-pill badge-danger'>\${json.cnt}개</span>`);
+				   $("#secondtbl > tbody > tr:nth-child(2) > td").html(`<span>\${json.pname} 외 \${Number(json.cnt) - 1}개 </span>`);
+			   }
+		   
+			   
+		   },
+			   
+			   
+			 error: function(request, status, error){
+	      alert("code: "+request.status+"\n"+"message: "+request.responseText+"\n"+"error: "+error);
+	   }
+	});
+	}
+
+
 </script>
 
 </head>
