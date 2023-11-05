@@ -20,10 +20,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 <%-- 직접 만든 CSS --%>
-<link rel="stylesheet" type="text/css" href="<%= ctxPath%>/css/index.css"/>
+<link rel="stylesheet" type="text/css" href="<%= ctxPath%>/pys.css/index.css"/>
 
 <%-- Optional JavaScript --%>
-<script type="text/javascript" src="<%= ctxPath%>/js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="<%= ctxPath%>/pys.js/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="<%= ctxPath%>/bootstrap-4.6.2-dist/js/bootstrap.bundle.min.js" ></script> 
 
 <%-- jQueryUI CSS 및 JS --%>
@@ -31,13 +31,13 @@
 <script type="text/javascript" src="<%= ctxPath%>/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <%-- 직접만든 JS --%>
-<script type="text/javascript" src="<%= ctxPath%>/js/index.js"></script>
+<script type="text/javascript" src="<%= ctxPath%>/pys.js/index.js"></script>
 
 <script type="text/javascript">
 
 function redirectToOtherPage() {
 	
-    window.location.href = "http://localhost:9090/tempSemi/login/loginIndex.bk"; // "목표페이지의URL"을 실제 페이지의 URL로 바꿔주세요.
+    window.location.href = "http://localhost:9090/realSemi/login/loginIndex.bk"; // "목표페이지의URL"을 실제 페이지의 URL로 바꿔주세요.
 }
 </script>
 
