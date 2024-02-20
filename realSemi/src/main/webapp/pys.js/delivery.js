@@ -124,7 +124,7 @@ function menufunction(cnum) {
 function cartListAdd(pnum){
 	
 	$.ajax({
-        url: "/realSemi//shop/cartListAdd.bk",
+        url: "/realSemi/shop/cartListAdd.bk",
         type: "post",
         data: { "pnum": pnum},
         dataType: "json",
