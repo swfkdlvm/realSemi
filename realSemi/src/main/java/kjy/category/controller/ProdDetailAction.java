@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import common.controller.AbstractController;
-import kjy.myshop.domain.*;
+import pys.myshop.domain.*;
 import kjy.myshop.model.*;
 
 public class ProdDetailAction extends AbstractController {

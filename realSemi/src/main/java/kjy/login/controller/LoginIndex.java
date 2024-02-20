@@ -19,6 +19,7 @@ public class LoginIndex extends AbstractController {
 				
 			}
 			else {
+
 				super.setRedirect(false);
 				super.setViewPage("/WEB-INF/kjy.login/loginIndex.jsp");
 			}

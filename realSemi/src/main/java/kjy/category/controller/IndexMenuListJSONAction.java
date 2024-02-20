@@ -9,7 +9,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import common.controller.AbstractController;
-import kjy.myshop.domain.*;
+import pys.myshop.domain.*;
 import kjy.myshop.model.*;
 
 public class IndexMenuListJSONAction extends AbstractController {

@@ -8,10 +8,11 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
+import pys.member.domain.MemberVO;
 import pys.myshop.domain.CartVO;
 import pys.myshop.domain.CategoryVO;
-import pys.myshop.domain.ImageVO;
 import pys.myshop.domain.ProductVO;
+import pys.myshop.domain.PurchaseReviewsVO;
 
 public class ProductDAO_imple implements ProductDAO {
 
@@ -167,7 +168,7 @@ public class ProductDAO_imple implements ProductDAO {
 	// 장바구니에 넣어주는 메소드 
 	@Override
 	public int addCart(Map<String, String> paraMap) throws SQLException {
-				int n = 0;
+		int n = 0;
 		
 		try {
 			
@@ -419,14 +420,319 @@ public class ProductDAO_imple implements ProductDAO {
 		
 		return countMap;
 		
-		
-		
-		
-	}
+	}// 특정 유저의 장바구니 상세테이블 개수 알아오기
 	
-	
+	// 로그인한 사용자가 특정 제품을 구매했는지 여부를 알아오는 것 구매했다라면 true, 구매하지 않았다면 false 를 리턴함.
+		@Override
+		   public boolean isOrder(Map<String, String> paraMap) throws SQLException {
+		      
+		      boolean bool = false;
+		      
+		      try {
+		         conn = ds.getConnection();
+		         
+		         String sql = " select D.odrseqnum " + 
+		                    " from tbl_orderdetail D JOIN tbl_order O " + 
+		                    " on D.fk_odrcode = O.odrcode " + 
+		                    " where D.fk_pnum = ? and O.fk_userid = ? ";
+		         
+		         pstmt = conn.prepareStatement(sql);
+		         pstmt.setString(1, paraMap.get("fk_pnum"));
+		         pstmt.setString(2, paraMap.get("fk_userid"));
+		         
+		         rs = pstmt.executeQuery();
+		         
+		         bool = rs.next();
+		         
+		      } finally {
+		         close();
+		      }
+		      
+		      return bool;
+		   }
 
-	
+		// 상품 후기 등록
+		@Override
+		public int addReview(PurchaseReviewsVO reviewsvo) throws SQLException {
+			
+			int n = 0;
+		      
+		      try {
+		         conn = ds.getConnection();
+		         
+		         String sql = " insert into tbl_purchase_reviews(review_seq, fk_userid, fk_pnum, contents, writeDate) "
+		                  + " values(seq_purchase_reviews.nextval, ?, ?, ?, default) ";
+		                  
+		         pstmt = conn.prepareStatement(sql);
+		         pstmt.setString(1, reviewsvo.getFk_userid());
+		         pstmt.setInt(2, reviewsvo.getFk_pnum());
+		         pstmt.setString(3, reviewsvo.getContents());
+		         
+		         n = pstmt.executeUpdate();
+		         
+		      } finally {
+		         close();
+		      }
+		      
+		      return n;
+			
+		}// end of public int addReview(PurchaseReviewsVO reviewsvo) throws SQLException
 
-	
+		//좋아요 투표하기
+		@Override
+		public int likeAdd(Map<String, String> paraMap) throws SQLException {
+			
+			int n = 0;
+		      
+		      try {
+		         conn = ds.getConnection();
+		         
+		         conn.setAutoCommit(false); // 수동커밋으로 전환 
+		         
+		         String sql = " delete from tbl_product_dislike " + 
+		                      " where fk_userid = ? and fk_pnum = ? ";
+		         
+		         pstmt = conn.prepareStatement(sql);
+		         pstmt.setString(1, paraMap.get("userid") );
+		         pstmt.setString(2, paraMap.get("pnum"));
+		         
+		         pstmt.executeUpdate();
+
+		         
+		         sql = " insert into tbl_product_like(fk_userid, fk_pnum) " + 
+		                " values(?, ?) ";
+		         
+		         pstmt = conn.prepareStatement(sql);
+		         pstmt.setString(1, paraMap.get("userid") );
+		         pstmt.setString(2, paraMap.get("pnum"));
+		         
+		         n = pstmt.executeUpdate();
+		                  
+		         if(n == 1) {
+		            conn.commit();
+		         }
+		         
+		      } catch(SQLIntegrityConstraintViolationException e) {
+		         conn.rollback();
+		      } finally {
+		         conn.setAutoCommit(true); // 자동커밋으로 전환 
+		         close();
+		      }
+		      
+		      return n;
+		}// end of public int likeAdd(Map<String, String> paraMap) throws SQLException
+		
+		// 싫어요 투표하기
+		@Override
+		public int dislikeAdd(Map<String, String> paraMap) throws SQLException {
+			int n = 0;
+		      
+		      try {
+		         conn = ds.getConnection();
+		         
+		         conn.setAutoCommit(false); // 수동커밋으로 전환 
+		         
+		         String sql = " delete from tbl_product_like " + 
+		                      " where fk_userid = ? and fk_pnum = ? ";
+		         
+		         pstmt = conn.prepareStatement(sql);
+		         pstmt.setString(1, paraMap.get("userid") );
+		         pstmt.setString(2, paraMap.get("pnum"));
+		         
+		         pstmt.executeUpdate();
+
+		         
+		         sql = " insert into tbl_product_dislike(fk_userid, fk_pnum) " + 
+		                " values(?, ?) ";
+		         
+		         pstmt = conn.prepareStatement(sql);
+		         pstmt.setString(1, paraMap.get("userid") );
+		         pstmt.setString(2, paraMap.get("pnum"));
+		         
+		         n = pstmt.executeUpdate();
+		                  
+		         if(n == 1) {
+		            conn.commit();
+		         }
+		         
+		      } catch(SQLIntegrityConstraintViolationException e) {
+		         conn.rollback();
+		      } finally {
+		         conn.setAutoCommit(true); // 자동커밋으로 전환 
+		         close();
+		      }
+		      
+		      return n;
+		}//end of public int dislikeAdd(Map<String, String> paraMap) throws SQLException
+
+
+		@Override
+		public Map<String, Integer> getLikeDislikeCnt(String pnum) throws SQLException {
+			Map<String, Integer> map = new HashMap<>();
+		      
+		      try {
+		         conn = ds.getConnection();
+		         
+		         String sql = " select ( select count(*) "+
+		                    "          from tbl_product_like "+
+		                    "          where fk_pnum = ? ) AS LIKECNT "+
+		                    "      , ( select count(*) "+
+		                    "          from tbl_product_dislike "+
+		                    "          where fk_pnum = ? ) AS DISLIKECNT "+
+		                    " from dual ";
+		         
+		         pstmt = conn.prepareStatement(sql);
+		         pstmt.setString(1, pnum);
+		         pstmt.setString(2, pnum);
+		         
+		         rs = pstmt.executeQuery();
+		         
+		         rs.next();
+		         
+		         map.put("likecnt", rs.getInt(1));
+		         map.put("dislikecnt", rs.getInt(2));
+		         
+		      } finally {
+		         close();
+		      }
+		      
+		      return map;
+		}//end of public int dislikeAdd(Map<String, String> paraMap) throws SQLException
+
+		//리뷰 리스트 보기
+		@Override
+		public List<PurchaseReviewsVO> reviewList(String fk_pnum) throws SQLException {
+			
+			List<PurchaseReviewsVO> reviewList = new ArrayList<>();
+		      
+		      try {
+		         conn = ds.getConnection();
+		         
+		         String sql = " select review_seq, fk_userid, name, fk_pnum, contents, to_char(writeDate, 'yyyy-mm-dd hh24:mi:ss') AS writeDate "+
+		                    " from tbl_purchase_reviews R join tbl_member M "+
+		                    " on R.fk_userid = M.userid  "+
+		                    " where R.fk_pnum = ? "+
+		                    " order by review_seq desc ";
+		         
+		         pstmt = conn.prepareStatement(sql);
+		         pstmt.setString(1, fk_pnum);
+		         
+		         rs = pstmt.executeQuery();
+		         
+		         while(rs.next()) {
+		            String contents = rs.getString("contents");
+		            String name = rs.getString("name");
+		            String writeDate = rs.getString("writeDate");
+		            String fk_userid = rs.getString("fk_userid");
+		            int review_seq = rs.getInt("review_seq");
+		                                    
+		            PurchaseReviewsVO reviewvo = new PurchaseReviewsVO();
+		            reviewvo.setContents(contents);
+		            
+		            MemberVO mvo = new MemberVO();
+		            mvo.setName(name);
+		            
+		            reviewvo.setMvo(mvo);
+		            reviewvo.setWriteDate(writeDate);
+		            reviewvo.setFk_userid(fk_userid);
+		            reviewvo.setReview_seq(review_seq);
+		            
+		            reviewList.add(reviewvo);
+		         }         
+		         
+		      } finally {
+		         close();
+		      }
+		      
+		      return reviewList;   
+		}//end of public List<PurchaseReviewsVO> reviewList(String fk_pnum) throws SQLException
+
+		// 리뷰 지우기
+		@Override
+		public int reviewDel(String review_seq) throws SQLException {
+
+			int n = 0;
+		      
+		      try {
+		         conn = ds.getConnection();
+		         
+		         String sql = " delete from tbl_purchase_reviews "
+		                  + " where review_seq = ? ";
+		                  
+		         pstmt = conn.prepareStatement(sql);
+		         pstmt.setString(1, review_seq);
+		         
+		         n = pstmt.executeUpdate();
+		         
+		      } finally {
+		         close();
+		      }
+		      
+		      return n;
+		}//end of public int reviewDel(String review_seq) throws SQLException
+
+		// 리뷰 수정하기
+		@Override
+		public int reviewUpdate(Map<String, String> paraMap) throws SQLException {
+			int n = 0;
+		      
+		      try {
+		         conn = ds.getConnection();
+		         
+		         String sql = " update tbl_purchase_reviews set contents = ? "
+		        		 	+ "                                ,writeDate = sysdate "
+		                    + " where review_seq = ? ";
+		                  
+		         pstmt = conn.prepareStatement(sql);
+		         
+		         pstmt.setString(1, paraMap.get("contents"));
+		         pstmt.setString(2, paraMap.get("review_seq"));
+		         
+		         n = pstmt.executeUpdate();
+		         
+		      } finally {
+		         close();
+		      }
+		      
+		      return n;
+		}//end of public int reviewUpdate(Map<String, String> paraMap) throws SQLException
+
+
+		@Override
+		public List<Map<String, String>> selectStoreMap() throws SQLException {
+			List<Map<String, String>> storeMapList = new ArrayList<>();
+		      
+		      try {
+		         conn = ds.getConnection();
+		         
+		         String sql = " select storeID, storeName, storeUrl, storeImg, storeAddress, lat, lng, zindex " + 
+		                    " from tbl_map " + 
+		                    " order by zindex asc ";
+		         
+		         pstmt = conn.prepareStatement(sql);
+		         
+		         rs = pstmt.executeQuery();
+		         
+		         while(rs.next()) {
+		            Map<String, String> map = new HashMap<>();
+		            map.put("STOREID", rs.getString("STOREID"));
+		            map.put("STORENAME", rs.getString("STORENAME"));
+		            map.put("STOREURL", rs.getString("STOREURL"));
+		            map.put("STOREIMG", rs.getString("STOREIMG"));
+		            map.put("STOREADDRESS", rs.getString("STOREADDRESS"));
+		            map.put("LAT", rs.getString("LAT"));
+		            map.put("LNG", rs.getString("LNG"));
+		            map.put("ZINDEX", rs.getString("ZINDEX"));
+		                        
+		            storeMapList.add(map); 
+		         }
+		         
+		      } finally {
+		         close();
+		      }
+		      
+		      return storeMapList;
+		}
+
+
 }

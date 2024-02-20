@@ -9,7 +9,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import common.controller.AbstractController;
-import kjy.myshop.domain.CategoryVO;
+import pys.myshop.domain.CategoryVO;
 import kjy.myshop.model.ProductDAO;
 import kjy.myshop.model.ProductDAO_imple;
 

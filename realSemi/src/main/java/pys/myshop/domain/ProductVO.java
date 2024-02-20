@@ -20,7 +20,7 @@ public class ProductVO {
 	
 	public ProductVO() { }
 	
-	public ProductVO(int pnum, String pname, int fk_cnum, String pcompany, 
+	public ProductVO(int pnum, String pname, int fk_cnum, 
 			         String pimage, 
 			         int pqty, int price, 
 			         String pcontent, String pdetail) {

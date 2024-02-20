@@ -55,6 +55,11 @@ public class LoginAction extends AbstractController {
 		
 		MemberVO loginuser = mdao.selectOneMember(paraMap);
 		
+		HttpSession session = request.getSession(); 
+		// WAS 메모리에 생성되어져 있는 session 을 불러오는 것이다.
+		
+		session.setAttribute("loginuser", loginuser);
+		
 		if(loginuser != null) {
 		//	System.out.println("~~~ 확인용 로그인 성공 ^___^");
 			
@@ -62,9 +67,9 @@ public class LoginAction extends AbstractController {
 				// 마지막으로 로그인 한것이 1년 이상 지난 경우 
 				
 				String message = "로그인을 한지 1년이 지나서 휴면상태로 되었습니다.\\n휴면을 풀어주는 페이지로 이동합니다!!";
-				String loc = request.getContextPath()+"/index.bk";
+				String loc = request.getContextPath()+"/dormancyclear.bk";
 				// 원래는 위와같이 index.up 이 아니라 휴면인 계정을 풀어주는 페이지로 URL을 잡아주어야 한다.!!
-				
+
 				request.setAttribute("message", message);
 				request.setAttribute("loc", loc);
 				
@@ -101,10 +106,7 @@ public class LoginAction extends AbstractController {
 			       세션(session)에 저장해야 한다.!!!!          
 			 */
 			
-			HttpSession session = request.getSession(); 
-			// WAS 메모리에 생성되어져 있는 session 을 불러오는 것이다.
-			
-			session.setAttribute("loginuser", loginuser);
+		
 			// session(세션)에 로그인 되어진 사용자 정보인 loginuser 를 키이름을 "loginuser" 으로 저장시켜두는 것이다. 
 			
 			
@@ -112,7 +114,7 @@ public class LoginAction extends AbstractController {
 				// 비밀번호를 변경한지 3개월 이상된 경우 
 								
 				String message = "비밀번호를 변경하신지 3개월이 지났습니다.\\n암호를 변경하는 페이지로 이동합니다!!";
-				String loc = request.getContextPath()+"/index.bk";
+				String loc = request.getContextPath()+"/dormancyclear.bk";
 				// 원래는 위와같이 index.up 이 아니라 암호를 변경하는 페이지로 URL을 잡아주어야 한다.!!
 				
 				request.setAttribute("message", message);

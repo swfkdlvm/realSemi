@@ -1,7 +1,7 @@
 package kjy.member.model;
 
 import java.sql.SQLException;
-import java.util.*;
+import java.util.Map;
 
 import pys.member.domain.MemberVO;
 
@@ -39,9 +39,7 @@ public interface MemberDAO {
 	
 	// DB에 코인 및 포인트 증가하기
 	int coinUpdateLoginUser(Map<String, String> paraMap) throws SQLException;
-	
-	
-	
+
 	
 	
 	
