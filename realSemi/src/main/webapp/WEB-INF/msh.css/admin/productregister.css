@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: dabanggu;
+    font-weight: 400;
+    src: url(../../font/Typo_DabangguB.ttf) format("woff2"),url(../../font/Typo_DabangguB.ttf) format("woff")
+}
+
+nav{
+	background:rgb(226,34,25);
+}
+
+
+body > nav > ul > li > a {
+	font-family: dabanggu;
+	font-size: 30px;
+	color:white;
+}
+
+#horizon {
+	width:100%;
+	height:50px;
+	background-color: black;
+	display:flex;
+	
+}
+
+#horizon > span {
+	color: white;
+	display:inline-block;
+	margin: auto 0;
+	font-family: dabanggu;
+	padding-left: 10%;
+	
+	
+}
+
+.container {
+	border:solid 0px red;
+	height:1000px;
+}
+#tblProdInput > tbody > tr:nth-child(1)~* > td.prodInputName,
+#tblProdInput > tbody > tr:nth-child(1) > td.prodInputName{
+	background-color:rgb(242,235,230);
+	text-align:center;
+	font-size:35px;
+	font-family: dabanggu;
+	
+}
+
+
+#tblProdInput > tbody > tr:nth-child(2) > td:nth-child(2) > input{
+	height:50px;
+	font-size:15pt;
+	border: solid 3px;
+	border-radius:10pt;
+	font-family: dabanggu;
+    position:relative;
+	bottom:14px;
+	
+}
+
+#tblProdInput > tbody > tr:nth-child(1) > td:nth-child(2) > select{
+	font-family: dabanggu;
+	width:250px;
+	height:60px;
+	font-size:20pt;
+	border-radius:20pt;
+	
+	
+}
+
+#tblProdInput > tbody > tr:nth-child(3) > td:nth-child(2) > input{
+	font-size:25pt;
+	font-family: dabanggu;
+	
+}
+
+#tblProdInput > tbody > tr:nth-child(4) > td:nth-child(2) > span.ui-spinner.ui-corner-all.ui-widget.ui-widget-content{
+	padding-bottom:10px;
+	background-color:#f7eeff;
+	
+}
+
+#tblProdInput > tbody > tr:nth-child(4) > td:nth-child(2){
+	font-size:25px;
+	font-family: dabanggu;
+	
+}
+
+#tblProdInput > tbody > tr:nth-child(5) > td:nth-child(2) > input{
+	font-size:25px;
+	font-family: dabanggu;
+	border: solid 3px;
+     border-radius:10pt;
+	
+}
+
+#tblProdInput > tbody > tr:nth-child(7) > td:nth-child(2) > input{
+	position:relative;
+	bottom:15px;
+	border: solid 3px;
+	font-size:26px;
+	font-family: dabanggu;
+		border-radius:10pt;
+}
+
+body > div.container > div > div > span{
+	font-family: dabanggu;
+}
+
+#tblProdInput > tbody > tr:nth-child(6) > td:nth-child(2) > textarea{
+	font-size:20px;
+	border: solid 3px;
+	font-family: dabanggu;
+	
+}
+#btnRegister{
+	color:white;
+	font-family: dabanggu;
+}
+
+#tblProdInput > tbody > tr:nth-child(9) > td > input:nth-child(2){
+	color:white;
+	font-family: dabanggu;
+}
+
+
+#tblProdInput > tbody > tr:nth-child(1) > td:nth-child(2) > span{
+	font-family: dabanggu;
+	font-size:20px;
+}
+
+#tblProdInput > tbody > tr:nth-child(2) > td:nth-child(2) > span{
+	font-family: dabanggu;
+	font-size:20px;
+	position:relative;
+	bottom:13px;
+}
+
+#tblProdInput > tbody > tr:nth-child(4) > td:nth-child(2) > span{
+	font-size:16px;
+}
+
+#tblProdInput > tbody > tr:nth-child(5) > td:nth-child(2) > span{
+	font-size:17px;
+	font-family: dabanggu;
+}
+
+
+#tblProdInput > tbody > tr:nth-child(3) > td:nth-child(2) > span{
+	margin-left:430px;
+	font-size:15pt;
+	position:relative;
+	bottom:30px;
+	font-family: dabanggu;
+}
+
+
+
+
+
+
+
+

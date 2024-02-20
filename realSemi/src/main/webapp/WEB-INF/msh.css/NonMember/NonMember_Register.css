@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: dabanggu;
+    font-weight: 400;
+    src: url(../font/Typo_DabangguB.ttf) format("woff2"),url(../font/Typo_DabangguB.ttf) format("woff")
+}
+body {
+	background-color: rgb(242,235,230);
+	
+}
+table#navtbl {
+   margin: 10px auto;
+   width: 66.5%;
+   color: white;
+   font-family: dabanggu;
+}
+
+table#navtbl > tbody > tr:first-child > td {
+   text-align: right;
+   padding-bottom: 20px;
+   font-size: 11pt;
+}
+
+table#navtbl > tbody > tr:nth-child(2) > td:first-child {
+   font-size: 25pt;
+   font-weight: bolder;
+} 
+
+a.nav-item {
+   font-size: 11pt;
+   text-decoration: none;
+   margin-left: 15px;
+   color: white;
+}
+
+
+
+.register_btn {
+	height:50px;
+	width: 100px;
+	border-radius: 20px;
+	border:none;
+	background-color: rgb(80,36,22);
+	color:white;
+	font-family: dabanggu;
+}
+
+.label {
+	padding-top: 210px;
+	width:100%;
+	background-color: black;
+	color:white;
+	padding-left: 300px;
+	height:250px;
+	font-family: dabanggu;
+}
+
+.register {
+	border: solid 0px red;
+	display:flex;
+	margin-top: 50px;
+	height:1200px;
+	
+}
+
+.register>table {
+	border:solid 0px red;
+	margin: 0 auto;
+	
+	
+	
+}
+
+.register>table th {
+	
+	font-size: 50px;
+	
+	padding-bottom: 50px;
+}
+#tblMemberRegister > tbody > tr:nth-child(1) > td {
+	padding-bottom: 30px;
+}
+
+.register>table > tbody > tr:first-child > td:first-child {
+	
+	font-size: 30px;
+}
+
+.register > table tr  {
+	border:solid 0px red;
+	
+}
+
+#tblMemberRegister > tbody > tr td {
+	font-size: 20px;
+	 
+}
+
+input {
+	border-radius: 10px;
+}
+#tblMemberRegister > tbody > tr > td {
+	padding-top: 20px;
+}
+
+#tblMemberRegister > tbody > tr:nth-child(1) > td {
+	font-size: 30px;
+}
+
+#address{
+	margin-bottom: 20px;
+}
+
+#tblMemberRegister > tbody > tr > td:nth-child(1){
+	padding-right: 50px;
+}
+
+#idcheck,#emailcheck {
+	background-color: rgb(80,36,22);
+	color:white;
+	border-radius: 10px;
+	font-family: dabanggu;
+}
+
+#emailcheck {
+	margin-left: 15px;
+}
+
+.register_btn {
+	background-color:rgb(80,36,22);
+	color:white;
+	border-radius: 10px;
+	font-family: dabanggu;
+}
+
+.cancel_btn {
+	background-color: red;
+	color:white;
+	border-radius: 10px;
+	font-family: dabanggu;
+	height:50px;
+	width:100px;
+}
+
+
+#tblMemberRegister > tbody > tr:nth-child(11) > td > input.Order_btn{
+	background-color: #603434;
+	color:white;
+	border-radius: 10px;
+	font-family: dabanggu;
+	height:50px;
+	width:100px;
+}
+
+#phoneChk{
+	background-color: #603434;
+	color:white;
+	border-radius: 10px;
+	font-family: dabanggu;
+	height:32px;
+	width:100px;
+	position:relative;
+	bottom:3px;
+}
+
+#phoneChk2{
+	background-color: #603434;
+	color:white;
+	border-radius: 10px;
+	font-family: dabanggu;
+	height:32px;
+	width:100px;
+	position:relative;
+	bottom:3px;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,563 @@
+@charset "UTF-8";
+
+body > div {
+	font-size: 16px;
+    font-family: SDGothic,HGG,Malgun Gothic,"\B9D1\C740   \ACE0\B515",dotum,"\B3CB\C6C0",sans-serif;
+    -webkit-text-size-adjust: none;
+    color: #000;
+    word-wrap: normal;
+    word-break: keep-all;
+    box-sizing: border-box;
+    min-height: 450px;
+    margin: 0 auto;
+}
+
+body > div > div.locationWrap.WEB {
+	height: 58px;
+    padding: 10px 0;
+    color: #fff;
+    line-height: 38px;
+    background: #000;
+}
+
+body > div > div.locationWrap.WEB > div{
+    line-height: 38px;
+    box-sizing: border-box;
+    max-width: 1184px;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+body > div > div.locationWrap.WEB > div > div {
+	
+    box-sizing: border-box;
+    float: left;
+    font-size: .875rem;
+}
+ 
+body > div > div.locationWrap.WEB > div > div > a {
+	
+    margin: 0;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    float: left;
+    color: #fff;
+}  
+
+body > div > div.locationWrap.WEB > div > div > span:nth-child(2) {
+	    font-family: SDGothic,HGG,Malgun Gothic,"\B9D1\C740   \ACE0\B515",dotum,"\B3CB\C6C0",sans-serif;
+    -webkit-text-size-adjust: none;
+    word-wrap: normal;
+    word-break: keep-all;
+    color: #fff;
+    line-height: 38px;
+    font-size: .875rem;
+    float: left;
+}
+
+body > div > div.locationWrap.WEB > div > div > span:nth-child(3) {
+	
+    line-height: 38px;
+    font-size: .875rem;
+    float: left;
+}
+
+body > div > div.contentsBox01.bg_w {
+	    font-size: 16px;
+    font-family: SDGothic,HGG,Malgun Gothic,"\B9D1\C740   \ACE0\B515",dotum,"\B3CB\C6C0",sans-serif;
+    -webkit-text-size-adjust: none;
+    color: #000;
+    word-wrap: normal;
+    word-break: keep-all;
+    box-sizing: border-box;
+    background: #fff;
+    padding: 50px 0 45px;
+}
+
+body > div > div.contentsBox01.bg_w > div{
+    
+    max-width: 1184px;
+    margin: 0 auto;
+    padding: 0 20px;
+ }
+ 
+ body > div > div.contentsBox01.bg_w > div > div {
+	
+    position: relative;
+    margin-bottom: 26px;
+ }
+ 
+ body > div > div.contentsBox01.bg_w > div > div > h3{
+	
+    margin: 0;
+    padding: 0;
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+    line-height: 100%;
+    font-family: dabanggu;
+    font-weight: 400;
+ }
+ 
+ body > div > div.contentsBox01.bg_w > div > div > div {
+	
+    overflow: auto;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin: -17.5px 0 0;
+ }
+ 
+ body > div > div.contentsBox01.bg_w > div > div > div > ul {
+	 
+    margin: 0;
+    padding: 0;
+    display: table;
+ }
+ 
+body > div > div.contentsBox01.bg_w > div > div > div > ul > li:nth-child(1) {
+	
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    position: relative;
+    display: table-cell;
+    padding: 0 14px;
+    vertical-align: top;
+    white-space: nowrap;
+    padding-left: 0;
+ }
+ 
+ body > div > div.contentsBox01.bg_w > div > div > div > ul > li:nth-child(2),
+ body > div > div.contentsBox01.bg_w > div > div > div > ul > li:nth-child(3),
+ body > div > div.contentsBox01.bg_w > div > div > div > ul > li:nth-child(4),
+ body > div > div.contentsBox01.bg_w > div > div > div > ul > li:nth-child(5),
+ body > div > div.contentsBox01.bg_w > div > div > div > ul > li:nth-child(6)
+  {
+	position: relative;
+    display: table-cell;
+    padding: 0 14px;
+    vertical-align: top;
+    white-space: nowrap;
+ }
+ 
+ body > div > div.contentsBox01.bg_w > div > div > div > ul > li:nth-child(1) > a,
+ body > div > div.contentsBox01.bg_w > div > div > div > ul > li:nth-child(3) > a,
+ body > div > div.contentsBox01.bg_w > div > div > div > ul > li:nth-child(4) > a
+
+  {
+	 -webkit-text-size-adjust: none;
+    word-wrap: normal;
+    word-break: keep-all;
+    list-style: none;
+    white-space: nowrap;
+    margin: 0;
+    vertical-align: middle;
+    background: 0;
+    overflow: visible;
+    cursor: pointer;
+    display: inline-block;
+    color: #b8b8b8;
+    border: 0 solid transparent;
+    font-family: dabanggu;
+    font-weight: 400;
+    padding: 5px 0;
+    height: 35px;
+    font-size: 1rem;
+    border-width: 3px 0;
+ }
+     
+ body > div > div.contentsBox01.bg_w > div.web_container > div > div > ul > li.on > a {
+	-webkit-text-size-adjust: none;
+    word-wrap: normal;
+    word-break: keep-all;
+    list-style: none;
+    white-space: nowrap;
+    margin: 0;
+    vertical-align: middle;
+    background: 0;
+    overflow: visible;
+    cursor: pointer;
+    display: inline-block;
+    border: 0 solid transparent;
+    font-family: dabanggu;
+    font-weight: 400;
+    padding: 5px 0;
+    height: 35px;
+    font-size: 1rem;
+    border-width: 3px 0;
+    color: #e22219;
+    border-bottom-color: #e22219; 
+   }
+   
+body > div > div.contentsBox01.bg_w > div.web_container > div > div > ul > li:nth-child(1) > a,
+body > div > div.contentsBox01.bg_w > div.web_container > div > div > ul > li:nth-child(2) > a,
+body > div > div.contentsBox01.bg_w > div.web_container > div > div > ul > li:nth-child(3) > a,
+body > div > div.contentsBox01.bg_w > div.web_container > div > div > ul > li:nth-child(4) > a
+ {
+	font-weight: 800;
+	text-decoration-line: none;
+}
+
+body > div > div.contentsBox01.bg_w > div.web_container > div > div > ul > li:nth-child(1) > a:hover,
+body > div > div.contentsBox01.bg_w > div.web_container > div > div > ul > li:nth-child(3) > a:hover, 
+body > div > div.contentsBox01.bg_w > div.web_container > div > div > ul > li:nth-child(4) > a:hover 
+{
+    color: rgb(0, 0, 0); /* 회색 배경색으로 변경 */
+} 
+
+body > div > div.tab_cont.guideWrap {
+	font-size: 16px;
+    font-family: SDGothic,HGG,Malgun Gothic,"\B9D1\C740   \ACE0\B515",dotum,"\B3CB\C6C0",sans-serif;
+    -webkit-text-size-adjust: none;
+    color: #000;
+    word-wrap: normal;
+    word-break: keep-all;
+    box-sizing: border-box;
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.bg_w.appdown_guide {
+	
+    box-sizing: border-box;
+    background: #fff;
+    padding: 50px 0 45px;
+    font-size: 1.25rem;
+    padding-top: 38px;
+    text-align: center;
+    
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.bg_w.appdown_guide > div {
+	max-width: 1184px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+body > div > div.tab_cont.guideWrap > div.contentsBox01.bg_w.appdown_guide > div > h4{
+	
+    margin-bottom: 27px;
+    font-size: 3rem;
+    font-family: dabanggu;
+    font-weight: 400;
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.bg_w.appdown_guide > div > p {
+	 
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 1.25rem;
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.bg_w.appdown_guide > div > div.WEB.guide_img{
+	 
+    margin: 25px 0 45px;
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.bg_w.appdown_guide > div > div.MOB.guide_img {
+
+    text-align: center;
+    box-sizing: border-box;
+    display: none!important;
+    margin: 25px 0 45px;	
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.bg_w.appdown_guide > div > div.appdown {
+	
+    box-sizing: border-box;
+    margin-top: 44px;
+    font-size: 1.125rem;
+    text-align: left;
+    overflow: hidden;
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.bg_w.appdown_guide > div > div.appdown > dl.store_down {
+	 
+    font-size: 1.125rem;
+    text-align: left;
+    margin: 0;
+    position: relative;
+    float: left;
+    width: 50%;
+    min-height: 140px;
+    padding: 12px 150px 0 0;
+    box-sizing: border-box;
+    padding-right: 230px;
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.bg_w.appdown_guide > div > div.appdown > dl > dt
+{
+	margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 1.875rem;
+}
+
+
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.bg_w.appdown_guide > div > div.appdown > dl.WEB {
+	
+    font-size: 1.125rem;
+    text-align: left;
+    margin: 0;
+    position: relative;
+    min-height: 140px;
+    padding: 12px 150px 0 0;
+    box-sizing: border-box;
+    float: right;
+    width: 40%;
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.bg_w.appdown_guide > div > div.appdown > dl> dd {
+	
+    font-size: 1.125rem;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    line-height: 133%;
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.bg_w.appdown_guide > div > div.appdown > dl.store_down > dd > div {
+	
+    position: absolute;
+    top: 0;
+    right: 15px;
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.bg_w.appdown_guide > div > div.appdown > dl.store_down > dd > div > a.btn_googleplay {
+	
+    font-size: 1.125rem;
+    text-align: left;
+    line-height: 133%;
+    margin: 0;
+    color: #000;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    background: url(https://www.burgerking.co.kr/dist/img/btn_googleplay.38ae95ae.png) no-repeat 0 0;
+    display: block;
+    width: 204px;
+    height: 64px;
+    margin-bottom: 10px;
+    text-indent: -9999em;
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.bg_w.appdown_guide > div > div.appdown > dl.store_down > dd > div > a.btn_appstore {
+	
+    font-size: 1.125rem;
+    text-align: left;
+    line-height: 133%;
+    margin: 0;
+    color: #000;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    background: url(https://www.burgerking.co.kr/dist/img/btn_appstore.9bed720a.png) no-repeat 0 0;
+    display: block;
+    width: 204px;
+    height: 64px;
+    margin-bottom: 10px;
+    text-indent: -9999em;
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.bg_w.appdown_guide > div > div.appdown > dl.WEB > dd > p {
+	    font-family: SDGothic,HGG,Malgun Gothic,"\B9D1\C740   \ACE0\B515",dotum,"\B3CB\C6C0",sans-serif;
+    -webkit-text-size-adjust: none;
+    color: #000;
+    word-wrap: normal;
+    word-break: keep-all;
+    font-size: 1.125rem;
+    text-align: left;
+    line-height: 133%;
+    margin: 0;
+    padding: 0;
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.bg_w.appdown_guide > div > div.appdown > dl.WEB > dd > div {
+	
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 138px;
+    border: 1px solid #e5e5e5;
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.bg_w.appdown_guide > div > div.appdown > dl.WEB > dd > div > img {
+	
+    border: none;
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.app_guide {
+	    font-size: 16px;
+    font-family: SDGothic,HGG,Malgun Gothic,"\B9D1\C740   \ACE0\B515",dotum,"\B3CB\C6C0",sans-serif;
+    -webkit-text-size-adjust: none;
+    color: #000;
+    word-wrap: normal;
+    word-break: keep-all;
+    box-sizing: border-box;
+    padding: 90px 0 110px;
+    background: #f2ebe6
+    
+}	
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.app_guide > div {
+	
+    max-width: 1184px;
+    margin: 0 auto;
+    padding: 20px 0;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.app_guide > div > h4 {
+	margin-bottom: 27px;
+    font-size: 3rem;
+    font-family: dabanggu;
+    font-weight: 400;
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.app_guide > div > h4 > span{
+	
+    font-size: 3rem;
+    font-family: dabanggu;
+    font-weight: 400;
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.app_guide > div > p {
+	
+    margin: 0;
+    padding: 0;
+    font-size: 1.25rem;
+}   
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.app_guide > div > ul {
+	    font-size: 16px;
+    font-family: SDGothic,HGG,Malgun Gothic,"\B9D1\C740   \ACE0\B515",dotum,"\B3CB\C6C0",sans-serif;
+    -webkit-text-size-adjust: none;
+    color: #000;
+    word-wrap: normal;
+    word-break: keep-all;
+    padding: 0;
+    max-width: 968px;
+    margin: 70px auto 28px;
+    text-align: center;
+    overflow: hidden;
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.app_guide > div > ul > li {
+	 font-size: 16px;
+    font-family: SDGothic,HGG,Malgun Gothic,"\B9D1\C740   \ACE0\B515",dotum,"\B3CB\C6C0",sans-serif;
+    -webkit-text-size-adjust: none;
+    color: #000;
+    word-wrap: normal;
+    word-break: keep-all;
+    margin: 0;
+    list-style: none;
+    display: inline-block;
+    min-width: 31%;
+    margin-bottom: 37px;
+    padding: 0 3px;
+    box-sizing: border-box;
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.app_guide > div > ul > li:nth-child(1) > a,
+body > div > div.tab_cont.guideWrap > div.contentsBox01.app_guide > div > ul > li:nth-child(2) > a,
+body > div > div.tab_cont.guideWrap > div.contentsBox01.app_guide > div > ul > li:nth-child(3) > a,
+body > div > div.tab_cont.guideWrap > div.contentsBox01.app_guide > div > ul > li:nth-child(4) > a,
+body > div > div.tab_cont.guideWrap > div.contentsBox01.app_guide > div > ul > li:nth-child(5) > a {
+	 
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: block;
+    width: 218px;
+    height: 220px;
+    margin: 0 auto;
+    padding-top: 135px;
+    font-size: 1.125rem;
+    color: #89513a;
+    text-align: center;
+    line-height: 123%;
+    background-repeat: no-repeat;
+    background-position: top;
+    
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.app_guide > div > ul > li:nth-child(1) > a {
+	 background-image: url(https://www.burgerking.co.kr/dist/img/bg_appguide_membership.7136435b.png); 
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.app_guide > div > ul > li:nth-child(2) > a {
+	 background-image: url(https://www.burgerking.co.kr/dist/img/bg_appguide_delivery.c3f2ced5.png); 
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.app_guide > div > ul > li:nth-child(3) > a {
+	 background-image: url(https://www.burgerking.co.kr/dist/img/bg_appguide_king.6d88bf99.png); 
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.app_guide > div > ul > li:nth-child(4) > a {
+	 background-image: url(https://www.burgerking.co.kr/dist/img/bg_appguide_search.ff2855d3.png); 
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.app_guide > div > ul > li:nth-child(5) > a {
+	 background-image: url(https://www.burgerking.co.kr/dist/img/bg_appguide_coupon.b22de484.png); 
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.app_guide > div > div.WEB.order_caution {
+	 font-size: 16px;
+    font-family: SDGothic,HGG,Malgun Gothic,"\B9D1\C740   \ACE0\B515",dotum,"\B3CB\C6C0",sans-serif;
+    -webkit-text-size-adjust: none;
+    color: #000;
+    word-wrap: normal;
+    word-break: keep-all;
+    box-sizing: border-box;
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.app_guide > div > div.WEB.order_caution > h4{
+	
+    position: relative;
+    margin: 25px 0;
+    padding: 12px 0;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #000;
+    font-family: dabanggu;
+    font-weight: 400;
+}
+ 
+ body > div > div.tab_cont.guideWrap > div.contentsBox01.app_guide > div > div.WEB.order_caution > h5 {
+	
+    padding: 0;
+    font-weight: 900;
+    margin: 30px 0 10px;
+    font-size: 1rem;
+ }
+ 
+ body > div > div.tab_cont.guideWrap > div.contentsBox01.app_guide > div > div.WEB.order_caution > ul {
+        font-size: 16px;
+    font-family: SDGothic,HGG,Malgun Gothic,"\B9D1\C740   \ACE0\B515",dotum,"\B3CB\C6C0",sans-serif;
+    -webkit-text-size-adjust: none;
+    color: #000;
+    word-wrap: normal;
+    word-break: keep-all;
+    padding: 0;
+    margin: 7px 0 7px 5px;
+    line-height: 167%;
+    padding-left: 10pt;
+}
+
+body > div > div.tab_cont.guideWrap > div.contentsBox01.app_guide > div > div.MOB.order_caution {
+	 
+    display: none!important;
+}
