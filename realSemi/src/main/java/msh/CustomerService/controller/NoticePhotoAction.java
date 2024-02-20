@@ -19,7 +19,7 @@ public class NoticePhotoAction extends AbstractController{
 
 		HttpSession session = request.getSession();
 	    String root = session.getServletContext().getRealPath("/");
-	    String path = root + "resources"+File.separator+"tempSemifinal_photo_upload";
+	    String path = root + "resources"+File.separator+"realSemi_photo_upload";
 	      
 	    File dir = new File(path);
 	      
@@ -38,7 +38,7 @@ public class NoticePhotoAction extends AbstractController{
 	         
 	        String strURL = "";
 	        strURL += "&bNewLine=true&sFileName="+newFilename; 
-	        strURL += "&sFileURL="+ctxPath+"/resources/tempSemifinal_photo_upload/"+newFilename;
+	        strURL += "&sFileURL="+ctxPath+"/resources/realSemi_photo_upload/"+newFilename;
 	         
 	         // === 웹브라우저 상에 사진 이미지를 쓰기 === //
 	         PrintWriter out = response.getWriter();

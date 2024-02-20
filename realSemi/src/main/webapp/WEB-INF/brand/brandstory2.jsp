@@ -3,7 +3,6 @@
 
 <%
 String ctxPath = request.getContextPath();
-//    /MyMVC
 %>
 <!DOCTYPE html>
 <html>
