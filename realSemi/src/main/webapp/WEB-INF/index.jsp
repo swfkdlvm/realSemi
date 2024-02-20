@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%
     String ctxPath = request.getContextPath();
-    //    /MyMVC
+    //    /tempSemi
 %>
 <!DOCTYPE html>
 <html>
@@ -37,7 +37,7 @@
 
 function redirectToOtherPage() {
 	
-    window.location.href = "http://localhost:9090/realSemi/login/loginIndex.bk"; // "목표페이지의URL"을 실제 페이지의 URL로 바꿔주세요.
+    window.location.href = "http://localhost:9090/tempSemifinal/login/loginIndex.bk"; // "목표페이지의URL"을 실제 페이지의 URL로 바꿔주세요.
 }
 </script>
 
@@ -49,43 +49,44 @@ function redirectToOtherPage() {
 <header id="header" class="fixed-top">
         <div class="header-container">
             <h1 class="logo">
-                <a href="#"><img src="<%= ctxPath%>/image/logo.png"/></a>
+                <a href="<%= ctxPath%>/index.bk"><img src="<%= ctxPath%>/image/logo.png"/></a>
             </h1>
             
             <nav class="nav">
             <ul class="gnb">
                 <li><a href="#">메뉴소개</a>
                     <ul class="sub">
-                        <li><a href="#">스페셜&amp;할인팩</a></li>
-                        <li><a href="#">신제품(NEW)</a></li>
-                        <li><a href="#">프리미엄</a></li>
-                        <li><a href="#">와퍼&amp;주니어</a></li>
-                        <li><a href="#">치킨&amp;슈림프버거</a></li>
-                        <li><a href="#">올데이킹&amp;킹모닝</a></li>
-                        <li><a href="#">사이드</a></li>
-                        <li><a href="#">음료&amp;디저트</a></li>
+                        <li><a href="<%= ctxPath%>/category/special.bk?cnum=1">스페셜팩</a></li>
+                        <li><a href="<%= ctxPath%>/category/special.bk?cnum=2">신제품</a></li>
+                        <li><a href="<%= ctxPath%>/category/special.bk?cnum=3">프리미엄</a></li>
+                        <li><a href="<%= ctxPath%>/category/special.bk?cnum=4">와퍼</a></li>
+                        <li><a href="<%= ctxPath%>/category/special.bk?cnum=5">치킨버거</a></li>
+                        <li><a href="<%= ctxPath%>/category/special.bk?cnum=6">사이드</a></li>
+                        <li><a href="<%= ctxPath%>/category/special.bk?cnum=7">음료</a></li>
                     </ul>
                 </li>
-                <li><a href="#">매장소개</a>
-                     <ul class="sub">
-                        <li><a href="#">매장찾기</a></li>
-                       
-                    </ul>
-                </li>
+                
                 <li><a href="#">이벤트</a>
                      <ul class="sub">
-                        <li><a href="">이벤트</a></li>
+                        <li><a href="<%=ctxPath%>/eventmain.bk">이벤트</a></li>
                         
                     </ul>
                 </li>
                 <li><a href="#">브랜드스토리</a>
                      <ul class="sub">
-                        <li><a href="#">BRAND</a></li>
-						<li><a href="#">WHOPPER</a></li>
-						<li><a href="#">COMM.</a></li>
+                        <li><a href="<%=ctxPath%>/brand/brandstory1.bk">BRAND</a></li>
+						<li><a href="<%=ctxPath%>/brand/brandstory2.bk">WHOPPER</a></li>
+						<li><a href="<%=ctxPath%>/brand/brandstory3.bk">COMM.</a></li>
                     </ul>
                 </li>
                 
+                <li><a href="#">고객센터</a>
+                     <ul class="sub">
+                        <li><a href="<%=ctxPath%>/shop/storeLocation.bk">매장찾기</a></li>
+                        <li><a href="<%=ctxPath%>/CustomerService/NoticeList.bk">게시판</a></li>
+                       
+                    </ul>
+                </li>
             </ul>
             <button type="button" onclick="redirectToOtherPage()">딜리버리 주문</button>
             </nav>
@@ -146,7 +147,7 @@ function redirectToOtherPage() {
   <%--배너 2개 시작 --%>
   <div class="banner">
   	<div>
-	  <a href="#"><img src="<%= ctxPath%>/image/배너5.png" style="background-color:rgb(199,161,134);"/></a><a href="#"><img src="<%= ctxPath%>/image/배너6.png" style="background-color:rgb(176,137,114);"/></a>
+	  <a href="<%=ctxPath %>/csc/app.bk"><img src="<%= ctxPath%>/image/배너5.png" style="background-color:rgb(199,161,134);"/></a><a href="#"><img src="<%= ctxPath%>/image/배너6.png" style="background-color:rgb(176,137,114);"/></a>
   	</div>
   </div>
   <%--배너 2개 끝 --%>
@@ -166,7 +167,7 @@ function redirectToOtherPage() {
   	</div>
   
   	<div class="find_shop_write3">
-  		<button type="button" class="find_shop_button">매장찾기</button>
+  		<button type="button" class="find_shop_button" onclick="location.href='<%=ctxPath%>/shop/storeLocation.bk'">매장찾기</button>
   	</div>
   	
   	<div class="find_shop_write4">
@@ -261,14 +262,13 @@ function redirectToOtherPage() {
       <ul class="main_bottom">
           <li><a href="#"><span class="main_bottom_main">메뉴</span></a>
               <ul class="main_bottom_sub">
-                  <li><a href="#">스페셜&amp;할인팩</a></li>
-                  <li><a href="#">신제품(NEW)</a></li>
-                  <li><a href="#">프리미엄</a></li>
-                  <li><a href="#">와퍼&amp;주니어</a></li>
-                  <li><a href="#">치킨&amp;슈림프버거</a></li>
-                  <li><a href="#">올데이킹&amp;킹모닝</a></li>
-                  <li><a href="#">사이드</a></li>
-                  <li><a href="#">음료&amp;디저트</a></li>
+                  <li><a href="<%= ctxPath%>/category/special.bk">스페셜팩</a></li>
+                  <li><a href="<%= ctxPath%>/category/new.bk">신제품</a></li>
+                  <li><a href="<%= ctxPath%>/category/premium.bk">프리미엄</a></li>
+                  <li><a href="<%= ctxPath%>/category/whopper.bk">와퍼</a></li>
+                  <li><a href="<%= ctxPath%>/category/chickenbugger.bk">치킨버거</a></li>
+                  <li><a href="<%= ctxPath%>/category/side.bk">사이드</a></li>
+                  <li><a href="<%= ctxPath%>/category/drink.bk">음료</a></li>
               </ul>
           </li>
           <li><a href="#"><span class="main_bottom_main">매장</span></a>
