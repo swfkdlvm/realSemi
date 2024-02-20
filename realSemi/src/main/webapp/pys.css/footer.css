@@ -4,11 +4,13 @@
     font-weight: 400;
     src: url(../font/Typo_DabangguB.ttf) format("woff2"),url(../font/Typo_DabangguB.ttf) format("woff")
 }
+
 /*밑에 메뉴 시작*/
 .main_bottom_container {
 	width:100%;
 	background-color: rgb(43, 2, 0);
 	height:300px;
+	
 }
 .main_bottom_container a {
 	text-decoration: none;
@@ -41,6 +43,7 @@ body > div.main_bottom_container > ul > li {
 	font-family: dabanggu;
 }
 
+
 /*밑에 메뉴 끝*/
 
 /*푸터 시작*/
@@ -50,6 +53,7 @@ div#footer {
    height: 230px;
    background-color: rgb(43, 2, 0);
    border: solid 2px  rgb(43, 2, 0);;
+   
 }
 
 div#ftcontent {
@@ -69,3 +73,4 @@ a.lasta {
    text-decoration: none;
    color: rgb(187,163,141);
 }
+

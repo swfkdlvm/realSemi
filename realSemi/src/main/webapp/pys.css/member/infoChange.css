@@ -115,7 +115,7 @@ input:focus {
 
 #item > form > div#btndiv button:first-child {
 	background-color: rgb(242, 235, 230);
-	color:  rgb(81, 35, 20);;
+	color:  rgb(81, 35, 20);
 }
 
 #item > form > div#btndiv button:last-child {
@@ -139,6 +139,15 @@ a.mda {
 #defaultInfo > tbody > tr> td > input {
 	/*border: solid 1px red;*/
 	margin: 20px 0;
+	
+}
+
+#emailcheck{
+	display:inline-block;
+	border: solid 2px black;
+	background-color:rgb(81, 35, 20);
+	color:white;
+	border-radius: 10px;
 	
 }
 

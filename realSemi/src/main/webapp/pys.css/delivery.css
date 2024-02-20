@@ -51,12 +51,12 @@ table.ordcrt > tbody > tr > td.smtd {
 
 table#firsttbl {
 	margin-left: 11.5%;
-	cursor: pointer;
+	
 }
 
 table#secondtbl {
 	margin: 0 -40%;
-	cursor: pointer;
+	
 }
 
 div#content {

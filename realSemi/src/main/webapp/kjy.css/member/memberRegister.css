@@ -144,7 +144,36 @@ input {
 }
 
 
+#tblMemberRegister > tbody > tr:nth-child(11) > td > input.Order_btn{
+	background-color: #603434;
+	color:white;
+	border-radius: 10px;
+	font-family: dabanggu;
+	height:50px;
+	width:100px;
+}
 
+#phoneChk{
+	background-color: #603434;
+	color:white;
+	border-radius: 10px;
+	font-family: dabanggu;
+	height:32px;
+	width:100px;
+	position:relative;
+	bottom:3px;
+}
+
+#phoneChk2{
+	background-color: #603434;
+	color:white;
+	border-radius: 10px;
+	font-family: dabanggu;
+	height:32px;
+	width:100px;
+	position:relative;
+	bottom:3px;
+}
 
 
 

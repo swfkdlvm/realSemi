@@ -40,7 +40,7 @@ $(document).ready(function(){
                           
             $.each(json, function(index, item){
                
-                 v_html += `<a href="javascript:menufunction(${item.cnum})">${item.cname}</a>&nbsp;&nbsp;`;  
+                 v_html += `<a style="text-decoration:none; color:black;" href="javascript:menufunction(${item.cnum})" >${item.cname}</a>&nbsp;&nbsp;`;  
                            
             });// end of $.each(json, function(index, item)-----
             
@@ -84,24 +84,7 @@ function menufunction(cnum) {
          
          else if(json.length > 0) {
             // 데이터가 존재하는 경우
-            
-         /*   
-            // 자바스크립트 사용하는 경우
-            json.forEach(function(item, index, array){
-               
-            });
-            
-            // jQuery 를 사용하는 경우
-            $.each(json, function(index, item){
-               
-            });
-         */    
-		//console.log("~~~확인용 json =>",JSON.stringify(json));
-         /*
-            ~~~ 확인용 json => [{"code":"100000","cname":"전자제품","cnum":1}
-                              ,{"code":"200000","cname":"의류","cnum":2}
-                              ,{"code":"300000","cname":"도서","cnum":3}]    
-         */ 
+       
 		
 			v_html += `<div class="row text-center">`;
                           
@@ -109,12 +92,12 @@ function menufunction(cnum) {
                
                  v_html += `<div class='col-lg-3'>
 		                     <div class="card mb-3">
-		                        <img src='/tempSemi/image/${item.pimage}' class='card-img-top' style='width: 100%'/>
+		                        <img src='/tempSemifinal/image/${item.pimage}' class='card-img-top' style='width: 100%'/>
 		                        <div class='card-body' style='padding: 0; font-size: 9pt;'>
 		                          <ul class='list-unstyled mt-2 text-center'> 
 		                               <li>${item.pname}</li> 
 		                               <li><span style="color: red;">${new Intl.NumberFormat('ko-KR', { style: 'currency', currency: 'KRW' }).format(item.price)}</span></li>
-		                               <li class='text-center'><a href="javascript:cartListAdd(${item.pnum})" class='stretched-link btn btn-outline-dark btn-sm' role='button'>상세보기</a></li> 
+		                               <li class='text-center'><a href="javascript:cartListAdd(${item.pnum})" class='stretched-link btn btn-outline-dark btn-sm' role='button'>딜리버리</a></li> 
 		                                   	
 		                            </ul>
 		                         </div>
@@ -141,7 +124,7 @@ function menufunction(cnum) {
 function cartListAdd(pnum){
 	
 	$.ajax({
-        url: "/tempSemi/shop/cartListAdd.bk",
+        url: "/tempSemifinal/shop/cartListAdd.bk",
         type: "post",
         data: { "pnum": pnum},
         dataType: "json",
@@ -149,7 +132,7 @@ function cartListAdd(pnum){
 			
 		if(json.n == 1) {
 				
-				location.href = "/tempSemi/shop/cartList.bk";
+				location.href = "/tempSemifinal/shop/cartList.bk";
 		 
 	 		}
 			

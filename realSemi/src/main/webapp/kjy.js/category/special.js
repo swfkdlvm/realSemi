@@ -5,7 +5,7 @@ $(document).ready(function(){
 	// 메뉴 리스트에서 클릭을 했을 때 input 태그의 값을 let 변수에 저장, 페이지가 로딩되었을때
 	// let 에 저장된 값의 카테고리가 뜨게끔
 	
-	let cnum = 1;
+	let cnum = Number("${requestScope.cnum}");
 	
 	menufunction(cnum);
 	
