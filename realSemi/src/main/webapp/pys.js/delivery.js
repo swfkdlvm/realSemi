@@ -121,29 +121,7 @@ function menufunction(cnum) {
     });
 }
 
-function cartListAdd(pnum){
-	
-	$.ajax({
-        url: "/realSemi/shop/cartListAdd.bk",
-        type: "post",
-        data: { "pnum": pnum},
-        dataType: "json",
-        success: function(json) {
-			
-		if(json.n == 1) {
-				
-				location.href = "/realSemi/shop/cartList.bk";
-		 
-	 		}
-			
-		},
-		
-		error: function(request, status, error){
-         alert("code: "+request.status+"\n"+"message: "+request.responseText+"\n"+"error: "+error);
-      }      
-      
-	});
-}
+
 
 
 
