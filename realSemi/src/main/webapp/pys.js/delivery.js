@@ -92,7 +92,7 @@ function menufunction(cnum) {
                
                  v_html += `<div class='col-lg-3'>
 		                     <div class="card mb-3">
-		                        <img src='/tempSemifinal/image/${item.pimage}' class='card-img-top' style='width: 100%'/>
+		                        <img src='/realSemi/image/${item.pimage}' class='card-img-top' style='width: 100%'/>
 		                        <div class='card-body' style='padding: 0; font-size: 9pt;'>
 		                          <ul class='list-unstyled mt-2 text-center'> 
 		                               <li>${item.pname}</li> 
@@ -124,7 +124,7 @@ function menufunction(cnum) {
 function cartListAdd(pnum){
 	
 	$.ajax({
-        url: "/tempSemifinal/shop/cartListAdd.bk",
+        url: "/realSemi//shop/cartListAdd.bk",
         type: "post",
         data: { "pnum": pnum},
         dataType: "json",
@@ -132,7 +132,7 @@ function cartListAdd(pnum){
 			
 		if(json.n == 1) {
 				
-				location.href = "/tempSemifinal/shop/cartList.bk";
+				location.href = "/realSemi/shop/cartList.bk";
 		 
 	 		}
 			
