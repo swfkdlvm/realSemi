@@ -152,6 +152,7 @@
                 "width=800px, height=500px, top=100px, left=600px");
    }// end of function openMember(odrcode)-------------
    
+
 </script>
 
 <div class="container-fluid" style="border: solid 0px red">

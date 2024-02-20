@@ -124,7 +124,7 @@
 	<nav class="navbar navbar-expand-sm"  style="padding-left:100px;">
 		 
 		  <!-- Brand/logo -->
-		  <a class="navbar-brand pl-5" href="#"><img src="../image/logo.png" /></a>
+		  <a class="navbar-brand pl-5" href="<%= ctxPath%>/index.bk"><img src="../image/logo.png"" /></a>
 		  
 		  <!-- Links -->
 		  <ul class="navbar-nav">
@@ -141,9 +141,11 @@
 		      <a class="nav-link" href="<%= ctxPath%>/productregister.bk">제품등록</a>
 		    </li>
 		    <li class="nav-item pl-5">
-		      <a class="nav-link" href="<%= ctxPath%>/shop/orderList.bk">전체주문조회</a>
+		      <a class="nav-link" href="<%= ctxPath%>/shop/orderList.bk">회원 전체주문조회</a>
 		    </li>
-		    
+		    <li class="nav-item pl-5">
+		      <a class="nav-link" href="<%= ctxPath%>/NonMemberOrder/NonMemberOrder_orderList.bk">비회원 전체주문조회</a>
+		    </li>
 		  </ul>
 		</nav>
 		 <div id="horizon">

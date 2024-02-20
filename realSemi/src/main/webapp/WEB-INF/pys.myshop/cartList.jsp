@@ -312,7 +312,7 @@ function cartCount(){
 	});
 	}
 function gocart() {
-	location.href="/tempSemifinal/login/delivery.bk";
+	location.href="<%= ctxPath%>/login/delivery.bk";
 }
 
 </script>

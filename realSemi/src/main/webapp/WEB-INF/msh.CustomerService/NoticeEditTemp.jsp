@@ -244,6 +244,10 @@ button {
 		
 	}); // end of $(document).ready() ======================================================
 	
+	function redirectToOtherPage() {
+		
+	    window.location.href = "<%= ctxPath%>/login/loginIndex.bk"; // "목표페이지의URL"을 실제 페이지의 URL로 바꿔주세요.
+	}
 	 // ===== 임시 글을 가져오기 위한 함수시작  ==========
 	function goView(seq) {
 		const goBackURL = "${requestScope.goBackURL}";

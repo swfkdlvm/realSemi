@@ -71,7 +71,7 @@ function toggleImage() {
 	
 	
 	function memberRegister() {
-		window.location.href ="http://localhost:9090/tempSemifinal/member/memberRegister.bk";
+		window.location.href ="<%= ctxPath%>/member/memberRegister.bk";
 	}
 	
 	

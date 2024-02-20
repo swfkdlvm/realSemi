@@ -218,7 +218,7 @@
 		   
 		// infowindowArr 은 인포윈도우를 가지고 있는 객체 배열의 용도이다. 
 		   var infowindowArr = new Array(); 
-		   var imageSrc = 'http://localhost:9090/tempSemi/image/Marker.png'; 
+		   var imageSrc = '<%= ctxPath%>/image/Marker.png'; 
 
            // 마커이미지의 크기 
           var imageSize = new kakao.maps.Size(34, 39);
@@ -267,7 +267,7 @@
 	   		
 			// ================== 지도에 클릭 이벤트를 등록하기 시작======================= //
 		   // 지도를 클릭하면 클릭한 위치에 마커를 표시하면서 위,경도를 보여주도록 한다.
-		   var imageSrc = 'http://localhost:9090/tempSemi/image/Marker.png';       
+		   var imageSrc = '<%= ctxPath%>/image/Marker.png';       
            
 		   // 2. 마커이미지의 크기 
 		    var imageSize = new kakao.maps.Size(34, 39);   
@@ -338,9 +338,7 @@
 
 <%--헤더 시작 --%>
 
-
-
-<header id="header" class="fixed-top">
+	<header id="header" class="fixed-top">
         <div class="header-container">
             <h1 class="logo">
                 <a href="<%= ctxPath%>/index.bk"><img src="<%= ctxPath%>/image/logo.png"/></a>
@@ -359,12 +357,7 @@
                         <li><a href="<%= ctxPath%>/category/special.bk?cnum=7">음료</a></li>
                     </ul>
                 </li>
-                <li><a href="#">매장소개</a>
-                     <ul class="sub">
-                        <li><a href="<%=ctxPath%>/shop/storeLocation.bk">매장찾기</a></li>
-                       
-                    </ul>
-                </li>
+                
                 <li><a href="#">이벤트</a>
                      <ul class="sub">
                         <li><a href="<%=ctxPath%>/eventmain.bk">이벤트</a></li>
@@ -379,6 +372,13 @@
                     </ul>
                 </li>
                 
+                <li><a href="#">고객센터</a>
+                     <ul class="sub">
+                        <li><a href="<%=ctxPath%>/shop/storeLocation.bk">매장찾기</a></li>
+                        <li><a href="<%=ctxPath%>/CustomerService/NoticeList.bk">게시판</a></li>
+                       
+                    </ul>
+                </li>
             </ul>
             <button type="button" onclick="redirectToOtherPage()">딜리버리 주문</button>
             </nav>

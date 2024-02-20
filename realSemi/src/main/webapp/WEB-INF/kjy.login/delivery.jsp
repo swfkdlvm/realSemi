@@ -6,7 +6,6 @@
     
 <%
     String ctxPath = request.getContextPath();
-    //    /tempSemi
 %>
     
 <!DOCTYPE html>

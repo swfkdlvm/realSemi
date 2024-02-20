@@ -54,7 +54,7 @@ $(document).ready(function(){
 function cartListAdd(pnum){
 	
 	$.ajax({
-        url: "/tempSemifinal/NonMemberOrder/Nonmember_cartListAdd.bk",
+        url: "<%= ctxPath%>/NonMemberOrder/Nonmember_cartListAdd.bk",
         type: "post",
         data: {"pnum": pnum, "ordernum":${nvo.ordernum} }, 
         dataType: "json",
@@ -76,7 +76,7 @@ function cartListAdd(pnum){
 }	
 	
 function redirectToCartList() {
-    var form = $('<form action="/tempSemifinal/NonMemberOrder/Nonmember_cartList.bk" method="post"></form>');
+    var form = $('<form action="<%= ctxPath%>/NonMemberOrder/Nonmember_cartList.bk" method="post"></form>');
 
     form.append('<input type="hidden" name="ordernum" value="' + '${nvo.ordernum}' + '">');
     
@@ -99,8 +99,6 @@ function redirectToCartList() {
 				<tr>
 					<td colspan="2">
 						<a class="nav-item" href="<%= ctxPath%>/index.bk">브랜드홈</a>
-						<a class="nav-item" href="<%= ctxPath%>/login/logout.bk">로그아웃</a>
-						<a class="nav-item" href="#">MY킹</a>
 						<a class="nav-item" href="<%= ctxPath%>/member/adminIndex.bk">관리자 페이지</a>
 					</td>
 				</tr>
@@ -110,8 +108,6 @@ function redirectToCartList() {
 				<tr>
 					<td colspan="2">
 						<a class="nav-item" href="<%= ctxPath%>/index.bk">브랜드홈</a>
-						<a class="nav-item" href="<%= ctxPath%>/login/logout.bk">로그아웃</a>
-						<a class="nav-item" href="#">MY킹</a>
 						<a class="nav-item" href="#">고객센터</a>
 					</td>
 				</tr>

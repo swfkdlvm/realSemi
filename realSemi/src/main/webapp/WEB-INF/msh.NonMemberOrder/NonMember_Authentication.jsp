@@ -291,7 +291,10 @@ $(document).ready(function(){
 	
 }); //end of $(document).ready(function(){---------------
 	
-
+function register() {
+	
+    window.location.href = "<%= ctxPath%>/member/memberRegister.bk"; //
+}
 
 
 //Function Declaration
@@ -383,9 +386,7 @@ function goReset() {
     	<tbody>
             <tr>
                <td colspan="2">
-                  <a class="nav-item" href="#">브랜드홈</a>
-                  <a class="nav-item" href="#">로그아웃</a>
-                  <a class="nav-item" href="#">MY킹</a>
+                  <a class="nav-item" href="<%= ctxPath%>/index.bk">브랜드홈</a>
                   <a class="nav-item" href="#">고객센터</a>
                </td>
             </tr>
@@ -394,7 +395,7 @@ function goReset() {
                <td>
                   <table style="margin-left: auto;">
                      <tr>
-                        <td><button type="button" class="register_btn">회원가입</button></td>
+                        <td><button type="button" class="register_btn" onclick="register()">회원가입</button></td>
                      </tr>
                      <tr>
                         

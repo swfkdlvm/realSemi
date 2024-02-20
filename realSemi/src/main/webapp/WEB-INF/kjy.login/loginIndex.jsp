@@ -265,7 +265,7 @@ function toggleImage() {
 	
 	
 	function memberRegister() {
-		window.location.href ="http://localhost:9090/tempSemifinal/member/memberRegister.bk";
+		window.location.href ="<%= ctxPath%>/member/memberRegister.bk";
 	}
 	
 	function nonmemberselecthide(){
@@ -314,7 +314,7 @@ function toggleImage() {
 				<tr>
 					<td colspan="2">
 						<a class="nav-item" href="<%= ctxPath%>/index.bk">브랜드홈</a>
-						<a class="nav-item" href="#">로그인</a>
+						<a class="nav-item" href="<%= ctxPath%>/login/login.bk">로그인</a>
 						<a class="nav-item" href="#">고객센터</a>
 					</td>
 				</tr>

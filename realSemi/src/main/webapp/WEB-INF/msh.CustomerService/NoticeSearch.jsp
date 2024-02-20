@@ -177,6 +177,10 @@ body > div.container{
   
 	}); // end of $(document).ready() =============================
 	
+	function redirectToOtherPage() {
+	    window.location.href = "<%= ctxPath%>/login/loginIndex.bk"; // "목표페이지의URL"을 실제 페이지의 URL로 바꿔주세요.
+	}	
+		
 	function addPost(){
 		location.href='<%=ctxPath%>/CustomerService/NoticeWrite.bk';
 	}

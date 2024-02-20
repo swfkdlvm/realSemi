@@ -88,9 +88,7 @@ function goIndex() {
          <tbody>
             <tr>
                <td colspan="2">
-                  <a class="nav-item" href="#">브랜드홈</a>
-                  <a class="nav-item" href="#">로그아웃</a>
-                  <a class="nav-item" href="#">MY킹</a>
+                  <a class="nav-item" href="<%= ctxPath%>/index.bk">브랜드홈</a>
                   <a class="nav-item" href="#">고객센터</a>
                </td>
             </tr>

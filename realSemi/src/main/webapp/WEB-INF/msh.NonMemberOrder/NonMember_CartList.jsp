@@ -90,7 +90,7 @@ $(document).ready(function(){
     	const ordernum = $("input.fk_ordernum").val();
         console.log("ordernum: ", ordernum);
 
-        var form = $('<form action="/tempSemifinal/NonMemberOrder/NonMember_deliverycart.bk" method="post"></form>');
+        var form = $('<form action="<%= ctxPath%>/NonMemberOrder/NonMember_deliverycart.bk" method="post"></form>');
         form.append('<input type="hidden" name="ordernum" value="' + ordernum + '">');
         $('body').append(form);
         form.submit();
@@ -305,7 +305,7 @@ function oqtyplus(obj) {
 
 function goBack() {
 	const ordernum = $("input.fk_ordernum").val();
-    var form = $('<form action="/tempSemifinal/NonMemberOrder/NonMember_deliverycart.bk" method="post"></form>');
+    var form = $('<form action="<%= ctxPath%>/NonMemberOrder/NonMember_deliverycart.bk" method="post"></form>');
     form.append('<input type="hidden" name="ordernum" value="' + ordernum + '">');
     $('body').append(form);
     form.submit();
@@ -402,7 +402,7 @@ function checkDelete() {
 
 
 function redirectToCartList(ordernum,address) {
-    var form = $('<form action="/tempSemifinal/NonMemberOrder/Nonmember_cartList.bk" method="post"></form>');
+    var form = $('<form action="<%= ctxPath%>/NonMemberOrder/Nonmember_cartList.bk" method="post"></form>');
 
     form.append('<input type="hidden" name="ordernum" value="' + ordernum + '">');
     $('body').append(form);
@@ -426,8 +426,6 @@ function redirectToCartList(ordernum,address) {
 				<tr>
 					<td colspan="2">
 						<a class="nav-item" href="<%= ctxPath%>/index.bk">브랜드홈</a>
-						<a class="nav-item" href="<%= ctxPath%>/login/logout.bk">로그아웃</a>
-						<a class="nav-item" href="#">MY킹</a>
 						<a class="nav-item" href="#">고객센터</a>
 					</td>
 				</tr>

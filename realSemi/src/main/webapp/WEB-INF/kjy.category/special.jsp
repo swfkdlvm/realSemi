@@ -180,7 +180,7 @@ function menufunction(cnum) {
 		                        <div class='card-body' style='padding: 0; font-size: 9pt;'>
 		                          <ul class='list-unstyled mt-2 text-center'> 
 		                               <li>\${item.pname}</li> 
-		                               <li class='text-center'><a href='/tempSemifinal/category/prodDetail.bk?pnum=\${item.pnum}' class='stretched-link' role='button'></a></li> 
+		                               <li class='text-center'><a href='<%= ctxPath%>/category/prodDetail.bk?pnum=\${item.pnum}' class='stretched-link' role='button'></a></li> 
 		                          </ul>
 		                        </div>
 		                      </div>
@@ -211,7 +211,7 @@ function menufunction(cnum) {
 <body>
 <%--헤더 시작 --%>
 
-<header id="header" class="fixed-top">
+	<header id="header" class="fixed-top">
         <div class="header-container">
             <h1 class="logo">
                 <a href="<%= ctxPath%>/index.bk"><img src="<%= ctxPath%>/image/logo.png"/></a>
@@ -230,12 +230,7 @@ function menufunction(cnum) {
                         <li><a href="<%= ctxPath%>/category/special.bk?cnum=7">음료</a></li>
                     </ul>
                 </li>
-                <li><a href="#">매장소개</a>
-                     <ul class="sub">
-                        <li><a href="<%=ctxPath%>/shop/storeLocation.bk">매장찾기</a></li>
-                       
-                    </ul>
-                </li>
+                
                 <li><a href="#">이벤트</a>
                      <ul class="sub">
                         <li><a href="<%=ctxPath%>/eventmain.bk">이벤트</a></li>
@@ -250,6 +245,13 @@ function menufunction(cnum) {
                     </ul>
                 </li>
                 
+                <li><a href="#">고객센터</a>
+                     <ul class="sub">
+                        <li><a href="<%=ctxPath%>/shop/storeLocation.bk">매장찾기</a></li>
+                        <li><a href="<%=ctxPath%>/CustomerService/NoticeList.bk">게시판</a></li>
+                       
+                    </ul>
+                </li>
             </ul>
             <button type="button" onclick="redirectToOtherPage()">딜리버리 주문</button>
             </nav>
