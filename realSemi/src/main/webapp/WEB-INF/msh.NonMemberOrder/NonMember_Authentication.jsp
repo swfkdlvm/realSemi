@@ -285,7 +285,6 @@ $(document).ready(function(){
 	    }else{
 	        alert('인증실패!')
 	        $("#phone2").val("");
-	        b_phone_click = true;
 	    }
 	});
 	
