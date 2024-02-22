@@ -401,7 +401,7 @@ button {
 				                </c:choose>
 				            </tbody>	           
 				        </table>
-				        <div id="pageList">
+				        <div id="pageList" class='text-center'>
 		        			${pageBar}
 		    			</div>
 	

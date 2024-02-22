@@ -173,7 +173,7 @@
                
                <tr bgcolor="#cfcfcf" style="font-size: 18pt; height: 60px">
 	               <th width="7%" style="text-align: center;">주문번호</th>
-	               <th width="7%" style="text-align: center;">결제일자</th>
+	               <th width="6%" style="text-align: center;">결제일자</th>
 	               <th width="30%" style="text-align: center;">제품정보</th> <%-- 제품번호,제품명,제품이미지1,판매정가,판매세일가,포인트 --%> 
 	               <th width="7%"  style="text-align: center;">주문수량</th>
 	               <th width="7%" style="text-align: center;">주문총액</th>   

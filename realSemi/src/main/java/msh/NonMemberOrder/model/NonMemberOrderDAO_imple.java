@@ -555,8 +555,8 @@ public class NonMemberOrderDAO_imple implements NonMemberOrderDAO {
 			try {
 				conn = ds.getConnection();
 		         
-				String sql = " UPDATE tbl_nonmember_order SET status = 2, deliverdate =  TO_TIMESTAMP(CURRENT_TIMESTAMP, 'YYYYMMDDHH24MISS') "
-			               + " WHERE fk_ordernum IN (" + fk_ordernum + ") ";
+				String sql = "UPDATE tbl_nonmember_order SET status = 2, deliverdate = to_date(sysdate,'yyyy.mm.dd hh24:mi') " +
+	                     "WHERE fk_ordernum IN (" + fk_ordernum + ")";
 		         
 				pstmt = conn.prepareStatement(sql); 
 		         

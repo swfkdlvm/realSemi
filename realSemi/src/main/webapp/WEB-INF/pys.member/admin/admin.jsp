@@ -32,6 +32,28 @@
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <%-- 직접만든 JS --%>
 <script type="text/javascript" src="<%= ctxPath%>/pys.js/admin.js"></script>
+<style>
+.container {
+	border: solid 3px silver;
+	height:1000px;
+}
+
+body > div.container > div{
+	margin-left:200px;
+	margin-top:200px;
+}
+
+body > div.container > span{
+	position:relative;
+	top:100px;
+	margin-left:310px;
+	font-family: dabanggu;
+}
+
+
+</style>
+
+
 </head>
 <body>
 	<nav class="navbar navbar-expand-sm"  style="padding-left:100px;">
@@ -66,7 +88,8 @@
 		 </div>
 		 
 		 <div class="container">
-		 <span style="font-size:80px;">나중에 통계 추가예정입니다....</span>
+		 <span style="font-size:80px;">신규매장 오픈</span>
+		 <div><img src="../image/버거킹 파주문산점.png"" /></div>
 		 
 		 </div>
 

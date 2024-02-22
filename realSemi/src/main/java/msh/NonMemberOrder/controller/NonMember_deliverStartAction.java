@@ -115,7 +115,7 @@ public class NonMember_deliverStartAction extends AbstractController {
 	                  paraMap.put("to", mvo.getPhonenumber()); // 수신번호
 	                  paraMap.put("from", "01027165039"); // 발신번호
 	                  paraMap.put("type", "SMS"); // Message type ( SMS(단문), LMS(장문), MMS, ATA )
-	                  paraMap.put("text", "세미프로젝트 버거킹에서 "+mvo.getName()+"님 께서 주문하신 주문번호["+key+"]로 배달 시작했습니다.");
+	                  paraMap.put("text", "세미프로젝트 버거킹에서 "+mvo.getName()+"님 께서 주문하신 주문번호["+key+"]로 배달 시작.");
 	                  //"주소 " + mvo.getAddress() + "" +mvo.getDetailaddress()+ "" +mvo.getExtraaddress() +"로 배송 시작했습니다."); // 문자내용    
 	                  paraMap.put("app_version", "JAVA SDK v2.2"); // application name and version
 	                        
