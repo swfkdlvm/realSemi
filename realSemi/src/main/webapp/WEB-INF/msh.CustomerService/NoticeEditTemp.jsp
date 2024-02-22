@@ -396,7 +396,7 @@ button {
 		                      </c:choose>
 		                    </tbody>	           
 		               </table>
-			           <div id="pageList">
+			           <div id="pageList" class='text-center'>
 	        		   ${pageBar}
 	    			   </div>
 				      <!-- 값이 동적으로 설정되도록 변경 -->

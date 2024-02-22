@@ -129,7 +129,7 @@ button {
 		    	     dataType:'json',
 		    	     cache:false,
 		    	     success:function(json){
-		    	     		alert("등록 성공!");
+		    	     		alert("수정 성공!");
 					    	location.href = "<%=ctxPath%>/CustomerService/NoticeList.bk";
 		    	     },
 		    	     error: function(request, status, error){
